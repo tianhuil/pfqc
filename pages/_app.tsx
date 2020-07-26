@@ -2,11 +2,11 @@ import 'purecss'
 import 'normalize.css'
 import '../public/styles.css'
 import { ThemeProvider } from 'styled-components'
+import { theme, Theme } from '../util/theme'
 
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
+// Declare theme to be Theme
+declare module 'styled-components' {
+  export interface DefaultTheme extends Theme {}
 }
 
 export default function MyApp({ Component, pageProps }) {
