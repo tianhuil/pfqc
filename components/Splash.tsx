@@ -1,0 +1,34 @@
+import * as React from 'react'
+import styled from 'styled-components'
+import { LargeButton } from './Button'
+
+const Style = styled.div`
+  width: 100%;
+  height: ${(p) => `calc(88% - ${p.theme.navbarHeight})`};
+  top: 100px;
+  left: 0;
+  position: fixed !important;
+  background-image: url('/Splash.jpg');
+  background-size: cover;
+`
+
+const Position = styled.div`
+  /* Control Height */
+  width: 100%;
+  top: calc(70%);
+  position: absolute;
+  /* Flex Box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const Splash = () => {
+  return (
+    <Style>
+      <Position>
+        <LargeButton>Register Now</LargeButton>
+      </Position>
+    </Style>
+  )
+}
