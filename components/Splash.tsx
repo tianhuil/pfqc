@@ -1,13 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { LargeButton } from './Button'
+import { LargeButton } from './style/elements'
 
 const Style = styled.div`
   width: 100%;
-  height: ${(p) => `calc(88% - ${p.theme.navbarHeight})`};
-  top: 100px;
-  left: 0;
-  position: fixed !important;
+  height: 100%;
   background-image: url('/Splash.jpg');
   background-size: cover;
 `
