@@ -1,4 +1,3 @@
-import 'purecss'
 import 'normalize.css'
 import '../public/styles.css'
 import { ThemeProvider } from 'styled-components'
