@@ -50,18 +50,21 @@ export const H1 = styled.div`
 `
 
 export interface SectionProps {
-  marginY?: number
+  marginYMobile?: number
+  marginYTable?: number
+  marginYDesktop?: number
 }
 
 export const Section = styled.div<SectionProps>`
-  margin: ${(p) => p.theme.lineHeight(p.marginY ?? 2)} 10px;
+  margin: ${(p) => p.theme.lineHeight(p.marginYMobile ?? 1)} auto;
+  max-width: 440px;
 
   ${(p) => p.theme.mediaQuery.tablet} {
-    margin: ${(p) => p.theme.lineHeight(p.marginY ?? 2)} auto;
+    margin: ${(p) => p.theme.lineHeight(p.marginYTable ?? 2)} auto;
     width: 440px;
   }
   ${(p) => p.theme.mediaQuery.desktop} {
-    margin: ${(p) => p.theme.lineHeight(p.marginY ?? 3)} auto;
+    margin: ${(p) => p.theme.lineHeight(p.marginYDesktop ?? 3)} auto;
     width: 920px;
   }
 `

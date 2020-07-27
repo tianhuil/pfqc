@@ -51,7 +51,7 @@ const Stat: React.FC<StatProp> = ({ number, unit }) => {
 
 export const Stats = () => {
   return (
-    <Section marginY={0}>
+    <Section marginYMobile={0.5} marginYTable={1} marginYDesktop={1.5}>
       <Flex container justifyContent="space-around">
         <Stat number="10th" unit="Annual" />
         <Stat number="240+" unit="Speakers" />
