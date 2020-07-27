@@ -56,7 +56,7 @@ export interface SectionProps {
 }
 
 export const Section = styled.div<SectionProps>`
-  margin: ${(p) => p.theme.lineHeight(p.marginYMobile ?? 1)} auto;
+  margin: ${(p) => p.theme.lineHeight(p.marginYMobile ?? 1)} 10px;
   max-width: 440px;
 
   ${(p) => p.theme.mediaQuery.tablet} {
