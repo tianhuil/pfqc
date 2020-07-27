@@ -12,7 +12,7 @@ export const SplashLayout = styled.div`
   background: #ccc;
   z-index: 1;
   overflow: hidden;
-  width: 100%;
+  width: calc(100vw - (100vw - 100%));
   height: 88%;
   top: 0;
   left: 0;

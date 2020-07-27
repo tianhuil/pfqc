@@ -36,17 +36,55 @@ export const Span = styled.span`
 
 export const P = styled(Span)`
   display: block;
+  color: rgb(0, 0, 0, 0.8);
 `
 
 export const H1 = styled.div`
   font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 300;
-  font-size: ${(p) => p.theme.fontSize(2)};
-  line-height: ${(p) => p.theme.lineHeight(2)};
-  margin-bottom: ${(p) => p.theme.lineHeight(2)};
+  font-weight: 200;
   text-align: center;
-  color: ${(p) => p.theme.color.black};
+  color: rgb(0, 0, 0, 0.5);
+
+  font-size: ${(p) => p.theme.fontSize(1.5)};
+  line-height: ${(p) => p.theme.lineHeight(2)};
+  margin: ${(p) => p.theme.lineHeight(1)} auto;
+
+  ${(p) => p.theme.mediaQuery.tablet} {
+    font-size: ${(p) => p.theme.fontSize(2)};
+    line-height: ${(p) => p.theme.lineHeight(2)};
+    margin: ${(p) => p.theme.lineHeight(2)} auto;
+  }
+
+  ${(p) => p.theme.mediaQuery.desktop} {
+    font-size: ${(p) => p.theme.fontSize(3)};
+    line-height: ${(p) => p.theme.lineHeight(3)};
+    margin: ${(p) => p.theme.lineHeight(2)} auto;
+  }
+`
+
+export const H2 = styled.div`
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(0, 0, 0, 0.5);
+
+  font-size: 18px;
+  line-height: 24px;
+  margin: 24px auto;
+
+  ${(p) => p.theme.mediaQuery.tablet} {
+    font-size: ${(p) => p.theme.fontSize(1.5)};
+    line-height: ${(p) => p.theme.lineHeight(1.5)};
+    margin: ${(p) => p.theme.lineHeight(1.5)} auto;
+  }
+
+  ${(p) => p.theme.mediaQuery.desktop} {
+    font-size: ${(p) => p.theme.fontSize(2)};
+    line-height: ${(p) => p.theme.lineHeight(2)};
+    margin: ${(p) => p.theme.lineHeight(1)} auto;
+  }
 `
 
 export interface SectionProps {
@@ -61,10 +99,10 @@ export const Section = styled.div<SectionProps>`
 
   ${(p) => p.theme.mediaQuery.tablet} {
     margin: ${(p) => p.theme.lineHeight(p.marginYTable ?? 2)} auto;
-    width: 440px;
+    max-width: 440px;
   }
   ${(p) => p.theme.mediaQuery.desktop} {
     margin: ${(p) => p.theme.lineHeight(p.marginYDesktop ?? 3)} auto;
-    width: 920px;
+    max-width: 920px;
   }
 `
