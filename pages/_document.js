@@ -1,5 +1,6 @@
 import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import { Html, Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -26,5 +27,26 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal()
     }
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&family=Roboto:wght@300&display=swap"
+            rel="stylesheet"
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          ></meta>
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }
