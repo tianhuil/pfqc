@@ -7,6 +7,7 @@ const Style = styled.div`
   height: 100%;
   background-image: url('/Splash.jpg');
   background-size: cover;
+  background-position: center;
 `
 
 const Position = styled.div`

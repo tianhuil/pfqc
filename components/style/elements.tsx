@@ -10,26 +10,32 @@ const Capsule = styled.div<CapsuleProps>`
   border-radius: 100px;
   background: #e77500;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: ${(props) => props.fontSize}px;
-  line-height: ${(props) => props.fontSize}px;
-  color: #fff;
-  padding: ${(props) => props.fontSize}px ${(props) => props.fontSize * 3}px;
+  color: ${(p) => p.theme.color.white};
+  font-weight: 800px;
   text-transform: uppercase;
   text-align: center;
   margin: auto;
+
+  font-size: ${(props) => props.fontSize}px;
+  line-height: ${(props) => props.fontSize}px;
+  padding: ${(props) => props.fontSize}px ${(props) => props.fontSize * 3}px;
 `
 
 export const LargeButton: React.FC = ({ children }) => {
   return <Capsule fontSize={16}>{children}</Capsule>
 }
 
-export const P = styled.div`
+export const Span = styled.span`
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
+  color: ${(p) => p.theme.color.black};
   font-size: ${(p) => p.theme.fontSize()};
   line-height: ${(p) => p.theme.lineHeight()};
-  color: #091133;
+`
+
+export const P = styled(Span)`
+  display: block;
 `
 
 export const H1 = styled.div`
@@ -38,10 +44,24 @@ export const H1 = styled.div`
   font-weight: 300;
   font-size: ${(p) => p.theme.fontSize(2)};
   line-height: ${(p) => p.theme.lineHeight(2)};
-  color: #091133;
+  margin-bottom: ${(p) => p.theme.lineHeight(2)};
+  text-align: center;
+  color: ${(p) => p.theme.color.black};
 `
 
-export const Section = styled.div`
-  width: 920px;
-  margin: ${(p) => p.theme.lineHeight(3)} auto;
+export interface SectionProps {
+  marginY?: number
+}
+
+export const Section = styled.div<SectionProps>`
+  margin: ${(p) => p.theme.lineHeight(p.marginY ?? 2)} 10px;
+
+  ${(p) => p.theme.mediaQuery.tablet} {
+    margin: ${(p) => p.theme.lineHeight(p.marginY ?? 2)} auto;
+    width: 440px;
+  }
+  ${(p) => p.theme.mediaQuery.desktop} {
+    margin: ${(p) => p.theme.lineHeight(p.marginY ?? 3)} auto;
+    width: 920px;
+  }
 `
