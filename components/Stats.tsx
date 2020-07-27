@@ -1,7 +1,6 @@
 import React from 'react'
-import { Section, Span } from './style'
+import { Span } from './style'
 import styled from 'styled-components'
-import { Flex } from './Flex'
 
 const Number = styled.span`
   font-family: 'Poppins';
@@ -49,14 +48,29 @@ const Stat: React.FC<StatProp> = ({ number, unit }) => {
   )
 }
 
+const StatsSecton = styled.div`
+  margin: ${(p) => p.theme.lineHeight(0.5)} 10px;
+
+  ${(p) => p.theme.mediaQuery.tablet} {
+    margin: ${(p) => p.theme.lineHeight(1)} 40px;
+  }
+  ${(p) => p.theme.mediaQuery.desktop} {
+    margin: ${(p) => p.theme.lineHeight(2.5)} auto;
+    width: 920px;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+`
+
 export const Stats = () => {
   return (
-    <Section marginYMobile={0.5} marginYTable={1} marginYDesktop={1.5}>
-      <Flex container justifyContent="space-around">
-        <Stat number="10th" unit="Annual" />
-        <Stat number="240+" unit="Speakers" />
-        <Stat number="5K+" unit="Attendees" />
-      </Flex>
-    </Section>
+    <StatsSecton>
+      <Stat number="10th" unit="Annual" />
+      <Stat number="240+" unit="Speakers" />
+      <Stat number="5K+" unit="Attendees" />
+    </StatsSecton>
   )
 }
