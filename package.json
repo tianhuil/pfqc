@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "export": "next export",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "serve": "serve out/"
   },
   "dependencies": {
     "next": "latest",
@@ -24,6 +26,7 @@
     "@typescript-eslint/parser": "^3.7.0",
     "eslint": "^7.5.0",
     "prettier": "2.0.5",
+    "serve": "^11.3.2",
     "typescript": "^3.7.3"
   }
 }
