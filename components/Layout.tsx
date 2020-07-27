@@ -9,7 +9,7 @@ export const NavbarLayout = styled.div`
 `
 
 export const SplashLayout = styled.div`
-  background: green;
+  background: #ccc;
   z-index: 1;
   overflow: hidden;
   width: 100%;
