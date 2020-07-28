@@ -14,3 +14,8 @@ body {
   line-height: 27px;
   color: #091133;
 }
+
+#__next {
+  width: calc(100vw - (100vw - 100%));
+  overflow-x: hidden;
+}
