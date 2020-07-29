@@ -5,7 +5,7 @@ import { SplashLayout, BodyLayout, NavbarLayout } from '../components/Layout'
 import { Stats } from '../components/Stats'
 
 const IndexPage = () => (
-  <div>
+  <>
     <NavbarLayout>
       <Navbar />
     </NavbarLayout>
@@ -16,7 +16,7 @@ const IndexPage = () => (
       <Stats />
       <Events />
     </BodyLayout>
-  </div>
+  </>
 )
 
 export default IndexPage
