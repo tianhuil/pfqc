@@ -1,6 +1,7 @@
 import React from 'react'
 import { H1, P, Section, Col, Row, H2 } from './style'
 import styled from 'styled-components'
+import { EventProps } from '../lib/events'
 
 const Spacer = styled.div`
   flex: 0;
@@ -79,7 +80,17 @@ const speakers = [
   },
 ]
 
-export const Events = () => {
+const Detail: React.FC<EventProps> = ({ times, date }) => {
+  return (
+    <div>
+      {times.map((t) => (
+        <P>{t.time}</P>
+      ))}
+    </div>
+  )
+}
+
+export const Events: React.FC<EventProps> = (props) => {
   return (
     <>
       <Section>
@@ -104,6 +115,9 @@ export const Events = () => {
               <Speaker {...speaker} />
             </Col>
           ))}
+          <Col size={1}>
+            <Detail {...props} />
+          </Col>
         </Row>
       </Section>
     </>
