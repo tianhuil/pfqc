@@ -90,6 +90,10 @@ const Detail: React.FC<EventProps> = ({ times, date }) => {
   )
 }
 
+const EqualCol = styled.div`
+  flex: 1 1 0px;
+`
+
 export const Events: React.FC<EventProps> = (props) => {
   return (
     <>
@@ -111,13 +115,13 @@ export const Events: React.FC<EventProps> = (props) => {
         <H2>September 30th, 2020</H2>
         <Row>
           {speakers.map((speaker) => (
-            <Col size={1}>
+            <EqualCol>
               <Speaker {...speaker} />
-            </Col>
+            </EqualCol>
           ))}
-          <Col size={1}>
+          <EqualCol>
             <Detail {...props} />
-          </Col>
+          </EqualCol>
         </Row>
       </Section>
     </>
