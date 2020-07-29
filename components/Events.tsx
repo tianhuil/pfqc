@@ -13,6 +13,72 @@ const Text = styled(P)`
   text-align: justify;
 `
 
+const Style = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    margin-bottom: ${(p) => p.theme.lineHeight(0.5)};
+  }
+
+  .name {
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: ${(p) => p.theme.lineHeight()};
+  }
+
+  .company {
+    font-weight: 300;
+    text-align: center;
+    font-size: 18px;
+  }
+`
+
+interface SpeakerProps {
+  name: string
+  title: string
+  company: string
+}
+
+const Speaker: React.FC<SpeakerProps> = ({ name, title, company }) => {
+  return (
+    <Style>
+      <img src="images/Dupire.png" />
+      <P className="name">{title}</P>
+      <P className="title">{title}</P>
+      <P className="company">{company}</P>
+    </Style>
+  )
+}
+
+const speakers = [
+  {
+    name: 'Bruno Dupire',
+    title: 'Managing Director',
+    company: 'Bloomberg',
+  },
+  {
+    name: 'Bruno Dupire',
+    title: 'Managing Director',
+    company: 'Bloomberg',
+  },
+  {
+    name: 'Bruno Dupire',
+    title: 'Managing Director',
+    company: 'Bloomberg',
+  },
+]
+
 export const Events = () => {
   return (
     <>
@@ -33,7 +99,11 @@ export const Events = () => {
 
         <H2>September 30th, 2020</H2>
         <Row>
-          <Col size={1}></Col>
+          {speakers.map((speaker) => (
+            <Col size={1}>
+              <Speaker {...speaker} />
+            </Col>
+          ))}
         </Row>
       </Section>
     </>
