@@ -1,7 +1,7 @@
 import React from 'react'
 import { H1, P, Section, Col, Row, H2 } from './style'
 import styled from 'styled-components'
-import { EventProps } from '../lib/events'
+import { EventProps, Speaker } from '../lib/events'
 
 const Spacer = styled.div`
   flex: 0;
@@ -45,42 +45,18 @@ const Style = styled.div`
   }
 `
 
-interface SpeakerProps {
-  name: string
-  title: string
-  company: string
-}
-
-const Speaker: React.FC<SpeakerProps> = ({ name, title, company }) => {
+const SpeakerComp: React.FC<Speaker> = ({ name, title, company, image }) => {
   return (
     <Style>
-      <img src="images/Dupire.png" />
-      <P className="name">{title}</P>
+      <img src={image} />
+      <P className="name">{name}</P>
       <P className="title">{title}</P>
       <P className="company">{company}</P>
     </Style>
   )
 }
 
-const speakers = [
-  {
-    name: 'Bruno Dupire',
-    title: 'Managing Director',
-    company: 'Bloomberg',
-  },
-  {
-    name: 'Bruno Dupire',
-    title: 'Managing Director',
-    company: 'Bloomberg',
-  },
-  {
-    name: 'Bruno Dupire',
-    title: 'Managing Director',
-    company: 'Bloomberg',
-  },
-]
-
-const Detail: React.FC<EventProps> = ({ times, date }) => {
+const Detail: React.FC<EventProps> = ({ times }) => {
   return (
     <div>
       {times.map((t) => (
@@ -114,9 +90,9 @@ export const Events: React.FC<EventProps> = (props) => {
 
         <H2>September 30th, 2020</H2>
         <Row>
-          {speakers.map((speaker) => (
+          {props.speakers.map((speaker) => (
             <EqualCol>
-              <Speaker {...speaker} />
+              <SpeakerComp {...speaker} />
             </EqualCol>
           ))}
           <EqualCol>

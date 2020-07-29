@@ -5,8 +5,16 @@ export interface Time {
   dayOffset?: string
 }
 
+export interface Speaker {
+  name: string
+  title: string
+  company: string
+  image: string
+}
+
 export interface EventProps {
   times: [Time, Time, Time, Time]
+  speakers: [Speaker, Speaker, Speaker]
   date: string
 }
 
@@ -25,6 +33,26 @@ export const getEventProps = (): EventProps => {
       toTime(m, 'Europe/London'),
       toTime(m, 'America/New_York'),
       toTime(m, 'America/Los_Angeles'),
+    ],
+    speakers: [
+      {
+        name: 'Bruno Dupire',
+        title: 'Managing Director',
+        company: 'Bloomberg',
+        image: 'images/Dupire.png',
+      },
+      {
+        name: 'Bruno Dupire',
+        title: 'Managing Director',
+        company: 'Bloomberg',
+        image: 'images/Dupire.png',
+      },
+      {
+        name: 'Bruno Dupire',
+        title: 'Managing Director',
+        company: 'Bloomberg',
+        image: 'images/Dupire.png',
+      },
     ],
     date: 'xyz',
   }
