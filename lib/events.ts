@@ -18,12 +18,20 @@ export interface EventProps {
   date: string
 }
 
+moment.updateLocale('en-US', null)
+
 export const getEventProps = (): EventProps => {
-  const m = moment('2014-06-01T12:00:00Z')
+  const m = moment('2020-09-30T16:00:00Z')
+  const baseTimezone = 'America/New_York'
 
   const toTime = (m: moment.Moment, tz: string): Time => {
+    const sameDayAsBase =
+      m.tz(baseTimezone).format('DD') !== m.tz(tz).format('DD')
+
     return {
-      time: m.tz(tz).format('h:mm A z'),
+      time: m.tz(tz).format('h:mm A'),
+      // HACK: the day can only be one forward or nothing from NYC
+      dayOffset: sameDayAsBase ? '+1' : undefined,
     }
   }
 
@@ -54,6 +62,6 @@ export const getEventProps = (): EventProps => {
         image: 'images/Dupire.png',
       },
     ],
-    date: 'xyz',
+    date: m.tz(baseTimezone).format('MMMM D, YYYY'),
   }
 }

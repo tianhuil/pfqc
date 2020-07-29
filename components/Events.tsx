@@ -88,7 +88,7 @@ export const Events: React.FC<EventProps> = (props) => {
           <Spacer />
         </Row>
 
-        <H2>September 30th, 2020</H2>
+        <H2>{props.date}</H2>
         <Row>
           {props.speakers.map((speaker) => (
             <EqualCol>
