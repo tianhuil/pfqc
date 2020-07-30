@@ -1,10 +1,12 @@
-import moment from 'moment-timezone'
+import moment, { Moment } from 'moment-timezone'
 
 export interface Time {
   city: string
   time: string
   dayOffset: string | null
 }
+
+type Time4 = [Time, Time, Time, Time]
 
 export interface Speaker {
   name: string
@@ -14,7 +16,7 @@ export interface Speaker {
 }
 
 export interface EventProps {
-  times: [Time, Time, Time, Time]
+  times: Time4
   speakers: [Speaker, Speaker, Speaker]
   date: string
 }
@@ -25,7 +27,7 @@ export const getEventProps = (): EventProps => {
   const m = moment('2020-09-30T16:00:00Z')
   const baseTimezone = 'America/New_York'
 
-  const toTime = (m: moment.Moment, tz: string): Time => {
+  const toTime = (m: Moment, tz: string): Time => {
     const sameDayAsBase =
       m.tz(baseTimezone).format('DD') !== m.tz(tz).format('DD')
 
@@ -37,13 +39,21 @@ export const getEventProps = (): EventProps => {
     }
   }
 
-  return {
-    times: [
+  const toTimes = (m: Moment): Time4 => {
+    return [
       toTime(m, 'Asia/Singapore'),
       toTime(m, 'Europe/London'),
       toTime(m, 'America/New_York'),
       toTime(m, 'America/Los_Angeles'),
-    ],
+    ]
+  }
+
+  const dateString = (m: Moment) => {
+    return m.tz(baseTimezone).format('MMMM D, YYYY')
+  }
+
+  return {
+    times: toTimes(m),
     speakers: [
       {
         name: 'Bruno Dupire',
@@ -64,6 +74,6 @@ export const getEventProps = (): EventProps => {
         image: 'images/Dupire.png',
       },
     ],
-    date: m.tz(baseTimezone).format('MMMM D, YYYY'),
+    date: dateString(m),
   }
 }
