@@ -1,8 +1,9 @@
 import moment from 'moment-timezone'
 
 export interface Time {
+  city: string
   time: string
-  dayOffset?: string
+  dayOffset: string | null
 }
 
 export interface Speaker {
@@ -29,9 +30,10 @@ export const getEventProps = (): EventProps => {
       m.tz(baseTimezone).format('DD') !== m.tz(tz).format('DD')
 
     return {
+      city: tz.split('/')[1].replace('_', ' '),
       time: m.tz(tz).format('h:mm A'),
       // HACK: the day can only be one forward or nothing from NYC
-      dayOffset: sameDayAsBase ? '+1' : undefined,
+      dayOffset: sameDayAsBase ? '+1' : null,
     }
   }
 
