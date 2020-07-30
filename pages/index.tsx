@@ -1,4 +1,4 @@
-import { Events } from '../components/Events'
+import { EventComp } from '../components/Events'
 import { Navbar } from '../components/Navbar'
 import { Splash } from '../components/Splash'
 import { SplashLayout, BodyLayout, NavbarLayout } from '../components/Layout'
@@ -13,13 +13,13 @@ type PromiseValue<T> = T extends PromiseLike<infer U> ? U : T
 
 export const getStaticProps = async () => {
   return {
-    props: { event: getEventProps() },
+    props: { events: getEventProps() },
   }
 }
 
 type Props = PromiseValue<ReturnType<typeof getStaticProps>>['props']
 
-const IndexPage: React.FC<Props> = ({ event }) => (
+const IndexPage: React.FC<Props> = ({ events }) => (
   <>
     <NavbarLayout>
       <Navbar />
@@ -29,7 +29,7 @@ const IndexPage: React.FC<Props> = ({ event }) => (
     </SplashLayout>
     <BodyLayout>
       <Stats />
-      <Events {...event} />
+      <EventComp events={events} />
     </BodyLayout>
   </>
 )

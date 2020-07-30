@@ -1,8 +1,7 @@
 import React from 'react'
 import { H1, P, Span, Section, Col, Row, H2, SmallButton } from './style'
 import styled from 'styled-components'
-import { EventProps, Speaker, Time } from '../lib/events'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Event, Speaker, Time } from '../lib/events'
 
 const Spacer = styled.div`
   flex: 0;
@@ -77,6 +76,10 @@ const DetailStyle = styled.div`
     display: flex;
     align-items: center;
   }
+
+  i.fa {
+    font-size: 24px;
+  }
 `
 
 const SpeakerComp: React.FC<Speaker> = ({ name, title, company, image }) => {
@@ -106,7 +109,6 @@ const Location: React.FC = () => {
   return (
     <div className="location-detail">
       <Span className="time">
-        {/* <FontAwesomeIcon icon="map-marker" /> */}
         <i className="fa fa-map-marker"></i>
       </Span>
       <Span className="dayOffset" />
@@ -115,7 +117,7 @@ const Location: React.FC = () => {
   )
 }
 
-const Detail: React.FC<EventProps> = ({ times }) => {
+const Detail: React.FC<Event> = ({ times }) => {
   return (
     <DetailStyle>
       {times.map((time) => (
@@ -133,9 +135,15 @@ const EqualCol = styled.div`
   flex: 1 1 0px;
 `
 
-export const Events: React.FC<EventProps> = (props) => {
+const Style = styled.div`
+  .event {
+    margin-top: ${(p) => p.theme.lineHeight(4)};
+  }
+`
+
+export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
   return (
-    <>
+    <Style>
       <Section>
         <H1>Conference Speakers</H1>
         <Row>
@@ -150,19 +158,24 @@ export const Events: React.FC<EventProps> = (props) => {
           </Col>
           <Spacer />
         </Row>
-
-        <H2>{props.date}</H2>
-        <Row>
-          {props.speakers.map((speaker) => (
-            <EqualCol>
-              <SpeakerComp {...speaker} />
-            </EqualCol>
+        <>
+          {events.map((event) => (
+            <div className="event">
+              <H2>{event.date}</H2>
+              <Row>
+                {event.speakers.map((speaker) => (
+                  <EqualCol>
+                    <SpeakerComp {...speaker} />
+                  </EqualCol>
+                ))}
+                <EqualCol>
+                  <Detail {...event} />
+                </EqualCol>
+              </Row>
+            </div>
           ))}
-          <EqualCol>
-            <Detail {...props} />
-          </EqualCol>
-        </Row>
+        </>
       </Section>
-    </>
+    </Style>
   )
 }
