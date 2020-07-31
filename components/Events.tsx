@@ -184,23 +184,21 @@ export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
             </Text>
           </Col>
         </Row>
-        <>
-          {events.map((event) => (
-            <div className="event">
-              <H2>{event.date}</H2>
-              <Row>
-                {event.speakers.map((speaker) => (
-                  <Col size={2} desktop={{ size: 1 }}>
-                    <SpeakerComp {...speaker} />
-                  </Col>
-                ))}
+        {events.map((event) => (
+          <div className="event">
+            <H2>{event.date}</H2>
+            <Row>
+              {event.speakers.map((speaker) => (
                 <Col size={2} desktop={{ size: 1 }}>
-                  <Detail {...event} />
+                  <SpeakerComp {...speaker} />
                 </Col>
-              </Row>
-            </div>
-          ))}
-        </>
+              ))}
+              <Col size={2} desktop={{ size: 1 }}>
+                <Detail {...event} />
+              </Col>
+            </Row>
+          </div>
+        ))}
       </Section>
     </Style>
   )
