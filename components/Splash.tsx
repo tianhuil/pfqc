@@ -5,7 +5,7 @@ import { LargeButton } from './style/elements'
 const Style = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url('/Splash.jpg');
+  background-image: url('images/Splash.jpg');
   background-size: cover;
   background-position: center;
 `
