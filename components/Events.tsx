@@ -3,13 +3,6 @@ import { H1, P, Span, Section, Col, Row, H2, SmallButton, theme } from './style'
 import styled from '@emotion/styled'
 import { Event, Speaker, Time } from '../lib/events'
 
-const Spacer = styled.div`
-  flex: 0;
-  ${theme.mediaQuery.desktop} {
-    flex: 1;
-  }
-`
-
 const Text = styled(P)`
   text-align: justify;
 `
@@ -149,7 +142,6 @@ export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
       <Section>
         <H1>Conference Speakers</H1>
         <Row>
-          <Spacer />
           <Col size={4} desktop={{ left: 1, right: 1, size: 2 }}>
             <Text>
               After 10 years of conferences in Princeton and Chicago, the
@@ -158,7 +150,6 @@ export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
               usual Princeton, NJ conference in the spring of 2021.
             </Text>
           </Col>
-          <Spacer />
         </Row>
         <>
           {events.map((event) => (
