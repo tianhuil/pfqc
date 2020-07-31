@@ -1,9 +1,10 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
+import { theme } from './style'
 
 export const NavbarLayout = styled.div`
   width: 100%;
   z-index: 2;
-  height: ${(p) => p.theme.lineHeight(3)};
+  height: ${theme.lineHeight(3)};
   background: white;
 `
 

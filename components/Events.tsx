@@ -1,11 +1,11 @@
 import React from 'react'
-import { H1, P, Span, Section, Col, Row, H2, SmallButton } from './style'
-import styled from 'styled-components'
+import { H1, P, Span, Section, Col, Row, H2, SmallButton, theme } from './style'
+import styled from '@emotion/styled'
 import { Event, Speaker, Time } from '../lib/events'
 
 const Spacer = styled.div`
   flex: 0;
-  ${(p) => p.theme.mediaQuery.desktop} {
+  ${theme.mediaQuery.desktop} {
     flex: 1;
   }
 `
@@ -23,7 +23,7 @@ const SpeakerStyle = styled.div`
     max-width: 150px;
     max-height: 150px;
     border-radius: 50%;
-    margin-bottom: ${(p) => p.theme.lineHeight(0.5)};
+    margin-bottom: ${theme.lineHeight(0.5)};
   }
 
   .name {
@@ -34,7 +34,7 @@ const SpeakerStyle = styled.div`
 
   .title {
     text-align: center;
-    margin-bottom: ${(p) => p.theme.lineHeight()};
+    margin-bottom: ${theme.lineHeight()};
   }
 
   .company {
@@ -65,11 +65,11 @@ const DetailStyle = styled.div`
   }
 
   .time-detail {
-    margin-bottom: ${(p) => p.theme.lineHeight(0.25)};
+    margin-bottom: ${theme.lineHeight(0.25)};
   }
 
   .location-detail {
-    margin: ${(p) => p.theme.lineHeight()} 0;
+    margin: ${theme.lineHeight()} 0;
   }
 
   .button {
@@ -137,7 +137,7 @@ const EqualCol = styled.div`
 
 const Style = styled.div`
   .event {
-    margin-top: ${(p) => p.theme.lineHeight(4)};
+    margin-top: ${theme.lineHeight(4)};
   }
 `
 

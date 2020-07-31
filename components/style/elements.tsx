@@ -1,6 +1,7 @@
 import * as React from 'react'
 
-import styled from 'styled-components'
+import styled from '@emotion/styled'
+import { theme } from './theme'
 
 interface CapsuleProps {
   fontSize: number
@@ -11,7 +12,7 @@ const Capsule = styled.div<CapsuleProps>`
   border-radius: 100px;
   background: #e77500;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: ${(p) => p.theme.color.white};
+  color: ${theme.color.white};
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
@@ -34,9 +35,9 @@ export const Span = styled.span`
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
-  color: ${(p) => p.theme.color.black};
-  font-size: ${(p) => p.theme.fontSize()};
-  line-height: ${(p) => p.theme.lineHeight()};
+  color: ${theme.color.black};
+  font-size: ${theme.fontSize()};
+  line-height: ${theme.lineHeight()};
 `
 
 export const P = styled(Span)`
@@ -51,20 +52,20 @@ export const H1 = styled.div`
   text-align: center;
   color: rgb(0, 0, 0, 0.6);
 
-  font-size: ${(p) => p.theme.fontSize(1.5)};
-  line-height: ${(p) => p.theme.lineHeight(2)};
-  margin: ${(p) => p.theme.lineHeight(1)} auto;
+  font-size: ${theme.fontSize(1.5)};
+  line-height: ${theme.lineHeight(2)};
+  margin: ${theme.lineHeight(1)} auto;
 
-  ${(p) => p.theme.mediaQuery.tablet} {
-    font-size: ${(p) => p.theme.fontSize(2)};
-    line-height: ${(p) => p.theme.lineHeight(2)};
-    margin: ${(p) => p.theme.lineHeight(2)} auto;
+  ${theme.mediaQuery.tablet} {
+    font-size: ${theme.fontSize(2)};
+    line-height: ${theme.lineHeight(2)};
+    margin: ${theme.lineHeight(2)} auto;
   }
 
-  ${(p) => p.theme.mediaQuery.desktop} {
-    font-size: ${(p) => p.theme.fontSize(3)};
-    line-height: ${(p) => p.theme.lineHeight(3)};
-    margin: ${(p) => p.theme.lineHeight(2)} auto;
+  ${theme.mediaQuery.desktop} {
+    font-size: ${theme.fontSize(3)};
+    line-height: ${theme.lineHeight(3)};
+    margin: ${theme.lineHeight(2)} auto;
   }
 `
 
@@ -79,16 +80,16 @@ export const H2 = styled.div`
   line-height: 24px;
   margin: 24px auto;
 
-  ${(p) => p.theme.mediaQuery.tablet} {
-    font-size: ${(p) => p.theme.fontSize(1.5)};
-    line-height: ${(p) => p.theme.lineHeight(1.5)};
-    margin: ${(p) => p.theme.lineHeight(1.5)} auto;
+  ${theme.mediaQuery.tablet} {
+    font-size: ${theme.fontSize(1.5)};
+    line-height: ${theme.lineHeight(1.5)};
+    margin: ${theme.lineHeight(1.5)} auto;
   }
 
-  ${(p) => p.theme.mediaQuery.desktop} {
-    font-size: ${(p) => p.theme.fontSize(2)};
-    line-height: ${(p) => p.theme.lineHeight(2)};
-    margin: ${(p) => p.theme.lineHeight(1)} auto;
+  ${theme.mediaQuery.desktop} {
+    font-size: ${theme.fontSize(2)};
+    line-height: ${theme.lineHeight(2)};
+    margin: ${theme.lineHeight(1)} auto;
   }
 `
 
@@ -99,15 +100,15 @@ export interface SectionProps {
 }
 
 export const Section = styled.div<SectionProps>`
-  margin: ${(p) => p.theme.lineHeight(p.marginYMobile ?? 1)} 10px;
+  margin: ${(p) => theme.lineHeight(p.marginYMobile ?? 1)} 10px;
   max-width: 440px;
 
-  ${(p) => p.theme.mediaQuery.tablet} {
-    margin: ${(p) => p.theme.lineHeight(p.marginYTable ?? 2)} auto;
+  ${theme.mediaQuery.tablet} {
+    margin: ${(p) => theme.lineHeight(p.marginYTable ?? 2)} auto;
     max-width: 440px;
   }
-  ${(p) => p.theme.mediaQuery.desktop} {
-    margin: ${(p) => p.theme.lineHeight(p.marginYDesktop ?? 3)} auto;
+  ${theme.mediaQuery.desktop} {
+    margin: ${(p) => theme.lineHeight(p.marginYDesktop ?? 3)} auto;
     max-width: 920px;
   }
 `

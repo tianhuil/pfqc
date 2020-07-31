@@ -1,24 +1,24 @@
 import React from 'react'
-import { Span } from './style'
-import styled from 'styled-components'
+import { Span, theme } from './style'
+import styled from '@emotion/styled'
 
 const Number = styled.span`
   font-family: 'Poppins';
   font-style: normal;
   font-weight: bold;
-  color: ${(p) => p.theme.color.orange};
+  color: ${theme.color.orange};
   font-size: 24px;
   line-height: 24px;
 
-  ${(p) => p.theme.mediaQuery.tablet} {
+  ${theme.mediaQuery.tablet} {
     font-size: 32px;
     line-height: 32px;
     margin: 0 8px;
   }
 
-  ${(p) => p.theme.mediaQuery.desktop} {
-    font-size: ${(p) => p.theme.lineHeight(2)};
-    line-height: ${(p) => p.theme.lineHeight(3)};
+  ${theme.mediaQuery.desktop} {
+    font-size: ${theme.lineHeight(2)};
+    line-height: ${theme.lineHeight(3)};
     margin: 0 12px;
   }
 `
@@ -33,7 +33,7 @@ const StatFlex = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  ${(p) => p.theme.mediaQuery.tablet} {
+  ${theme.mediaQuery.tablet} {
     flex-direction: row;
   }
 `
@@ -49,13 +49,13 @@ const Stat: React.FC<StatProp> = ({ number, unit }) => {
 
 const StatsSecton = styled.div`
   margin: 0 auto;
-  padding: ${(p) => p.theme.lineHeight(0.5)} 10px;
+  padding: ${theme.lineHeight(0.5)} 10px;
 
-  ${(p) => p.theme.mediaQuery.tablet} {
-    padding: ${(p) => p.theme.lineHeight(1)} 40px;
+  ${theme.mediaQuery.tablet} {
+    padding: ${theme.lineHeight(1)} 40px;
   }
-  ${(p) => p.theme.mediaQuery.desktop} {
-    padding: ${(p) => p.theme.lineHeight(2.5)} auto;
+  ${theme.mediaQuery.desktop} {
+    padding: ${theme.lineHeight(2.5)} auto;
     width: 920px;
   }
 

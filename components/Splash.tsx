@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { LargeButton } from './style/elements'
 
 const Style = styled.div`
