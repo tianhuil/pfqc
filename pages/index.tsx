@@ -5,6 +5,7 @@ import { SplashLayout, BodyLayout, NavbarLayout } from '../components/Layout'
 import { Stats } from '../components/Stats'
 import { getEventProps } from '../lib/events'
 import { CompaniesComp } from '../components/Companies'
+import { UniversityComp } from '../components/University'
 
 type PromiseLike<T> = {
   then(onfulfilled?: (value: T) => unknown): unknown
@@ -32,6 +33,7 @@ const IndexPage: React.FC<Props> = ({ events }) => (
       <Stats />
       <EventComp events={events} />
       <CompaniesComp />
+      <UniversityComp />
     </BodyLayout>
   </>
 )

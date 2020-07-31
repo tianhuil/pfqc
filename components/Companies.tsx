@@ -1,6 +1,6 @@
 import React from 'react'
-import { H1, Section, Row, theme, Col } from './style'
-import styled from '@emotion/styled'
+import { H1, Section } from './style'
+import { LogoGrid } from './LogoGrid'
 
 const logos = [
   // Row 1
@@ -20,35 +20,11 @@ const logos = [
   'Citadel.png',
 ]
 
-const Style = styled.div`
-  .image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    max-width: 75%;
-    margin: ${theme.lineHeight()} 0;
-  }
-  img {
-    max-width: 100%;
-  }
-`
-
 export const CompaniesComp = () => {
   return (
-    <Style>
-      <Section>
-        <H1>Past Speakers From</H1>
-        <Row>
-          {logos.map((logo) => (
-            <Col size={2} desktop={{ size: 1 }}>
-              <div className="image">
-                <img src={'images/company/' + logo} />
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Section>
-    </Style>
+    <Section>
+      <H1>Past Speakers From</H1>
+      <LogoGrid logos={logos.map((logo) => 'images/company/' + logo)} />
+    </Section>
   )
 }
