@@ -43,7 +43,7 @@ export const CompaniesComp = () => {
           {logos.map((logo) => (
             <Col size={2} desktop={{ size: 1 }}>
               <div className="image">
-                <img src={'images/logo/' + logo} />
+                <img src={'images/company/' + logo} />
               </div>
             </Col>
           ))}
