@@ -13,7 +13,7 @@ const Capsule = styled.div<CapsuleProps>`
   background: #e77500;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: ${theme.color.white};
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   margin: auto;

@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 const Number = styled.span`
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   color: ${theme.color.orange};
   font-size: 24px;
   line-height: 24px;
