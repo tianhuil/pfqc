@@ -6,6 +6,7 @@ import { Stats } from '../components/Stats'
 import { getEventProps } from '../lib/events'
 import { CompanyComp } from '../components/Company'
 import { UniversityComp } from '../components/University'
+import { Banner } from '../components/Banner'
 
 type PromiseLike<T> = {
   then(onfulfilled?: (value: T) => unknown): unknown
@@ -32,8 +33,12 @@ const IndexPage: React.FC<Props> = ({ events }) => (
     <BodyLayout>
       <Stats />
       <EventComp events={events} />
+      <Banner src="banner1.jpg" />
       <CompanyComp />
+      <Banner src="banner2.jpg" />
       <UniversityComp />
+      <Banner src="banner3.jpg" />
+      <Banner src="banner4.jpg" />
     </BodyLayout>
   </>
 )
