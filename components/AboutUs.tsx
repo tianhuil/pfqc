@@ -39,7 +39,7 @@ export const AboutUs = () => {
           </Text>
         </Col>
         <Col size={0} desktop={{ size: 2 }}>
-          <Img src="images/about.jpg" />
+          <Img src="/images/About.jpg" />
         </Col>
       </Row>
     </Section>
