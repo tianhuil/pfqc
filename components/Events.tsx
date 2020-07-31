@@ -14,14 +14,19 @@ const Text = styled(P)`
   text-align: justify;
 `
 
+const colMargin = theme.lineHeight(1)
+
 const SpeakerStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: ${colMargin} 0 ${colMargin} 0;
 
   img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 100%;
+    ${theme.mediaQuery.tablet} {
+      max-width: 75%;
+    }
     border-radius: 50%;
     margin-bottom: ${theme.lineHeight(0.5)};
   }
@@ -45,6 +50,7 @@ const SpeakerStyle = styled.div`
 
 const DetailStyle = styled.div`
   width: 100%;
+  margin: ${colMargin} 0 ${colMargin} 0;
 
   .time {
     display: inline-block;
@@ -131,13 +137,9 @@ const Detail: React.FC<Event> = ({ times }) => {
   )
 }
 
-const EqualCol = styled.div`
-  flex: 1 1 0px;
-`
-
 const Style = styled.div`
   .event {
-    margin-top: ${theme.lineHeight(4)};
+    margin-top: ${theme.lineHeight(3)};
   }
 `
 
@@ -148,7 +150,7 @@ export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
         <H1>Conference Speakers</H1>
         <Row>
           <Spacer />
-          <Col size={2}>
+          <Col size={4} desktop={{ left: 1, right: 1, size: 2 }}>
             <Text>
               After 10 years of conferences in Princeton and Chicago, the
               Princeton Fintech & Quant Conference is launching a virtual series
@@ -164,13 +166,13 @@ export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
               <H2>{event.date}</H2>
               <Row>
                 {event.speakers.map((speaker) => (
-                  <EqualCol>
+                  <Col size={2} desktop={{ size: 1 }}>
                     <SpeakerComp {...speaker} />
-                  </EqualCol>
+                  </Col>
                 ))}
-                <EqualCol>
+                <Col size={2} desktop={{ size: 1 }}>
                   <Detail {...event} />
-                </EqualCol>
+                </Col>
               </Row>
             </div>
           ))}

@@ -1,15 +1,25 @@
-import styled from '@emotion/styled'
 import React from 'react'
+
+import { jsx, css } from '@emotion/core'
+import styled from '@emotion/styled'
+
+import { theme } from './theme'
 
 export const Row = styled.div`
   display: flex;
-  margin: 0 -20px;
+  flex-wrap: wrap;
+  margin: 0 0;
+  ${theme.mediaQuery.tablet} {
+    margin: 0 -20px;
+  }
 `
 
 interface ColSpacing {
   left?: number
-  size?: number
+  size: number
   right?: number
+  top?: string
+  bottom?: string
   padding?: string
 }
 
@@ -18,24 +28,35 @@ interface ColProps extends ColSpacing {
   desktop?: ColSpacing
 }
 
+const colStyle = (
+  { left, size, right, padding }: ColSpacing,
+  paddingDefault = '20px'
+) => ({
+  margin: [0, (right ?? 0) * 25, 0, (left ?? 0) * 25]
+    .map((x) => `${x}%`)
+    .join(' '),
+  width: `${size * 25}%`,
+  padding: `0 ${padding ?? paddingDefault}`,
+})
+
 /**
  * A 4-col column layout
  */
-export const Col: React.FC<ColProps> = (props) => {
-  const properties = ({ left, size, right, padding }: ColSpacing) => `
-    margin: 0 ${right ? right * 25 : 0}% 0 ${left ? left * 25 : 0}%;
-    width: ${size * 25}%;
-    padding: 0 ${padding ?? '20px'};
-  `
-
-  const Component = styled.div<ColProps>`
-    ${properties(props)}
-
-    ${(p) => p.theme.mediaQuery.tablet} {
-      margin: 0 ${(p) => p.right * 25}% 0 ${(p) => p.left * 25}%;
-      width: ${(p) => p.size * 25}%;
-    }
-  `
-
-  return <Component>{props.children}</Component>
+export const Col: React.FC<ColProps> = ({
+  tablet,
+  desktop,
+  children,
+  ...phone
+}) => {
+  return (
+    <div
+      css={css({
+        ...colStyle(phone, '10px'),
+        ...(tablet && { [theme.mediaQuery.tablet]: colStyle(tablet) }),
+        ...(desktop && { [theme.mediaQuery.desktop]: colStyle(desktop) }),
+      })}
+    >
+      {children}
+    </div>
+  )
 }
