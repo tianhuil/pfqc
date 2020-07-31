@@ -18,7 +18,7 @@ const Img = styled.img`
 export const AboutUs = () => {
   return (
     <Section>
-      <H1>About Us</H1>
+      <H1>Our Mission</H1>
       <Row>
         <Col size={4} desktop={{ size: 2 }}>
           <Text>
