@@ -3,22 +3,22 @@ import { H1, Section } from './style'
 import { LogoGrid } from './LogoGrid'
 
 const logos = [
-  'Baruch.png',
-  'Berkeley.png',
+  'Princeton.png',
+  'Harvard.png',
+  'Yale.png',
+  'Cornell.png',
+  'Columbia.png',
+  'UPenn.png',
   'Brown.png',
   'CMU.png',
-  'Columbia.png',
-  'Cornell.png',
-  'Harvard.png',
-  'IIT.png',
   'MIT.png',
-  'NYU.png',
-  'Princeton.png',
   'Rutgers.png',
+  'NYU.png',
+  'Baruch.png',
   'UChicago.png',
+  'IIT.png',
   'UIUC.png',
-  'UPenn.png',
-  'Yale.png',
+  'Berkeley.png',
 ]
 
 export const UniversityComp = () => {

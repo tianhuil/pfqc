@@ -5,14 +5,17 @@ import styled from '@emotion/styled'
 const Style = styled.div`
   .image {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    max-width: 75%;
     margin: ${theme.lineHeight()} 0;
   }
   img {
-    max-width: 100%;
+    max-width: 70%;
+    ${theme.mediaQuery.tablet} {
+      max-width: 60%;
+    }
   }
 `
 
