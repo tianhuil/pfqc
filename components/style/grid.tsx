@@ -7,6 +7,7 @@ import { theme } from './theme'
 
 export const Row = styled.div`
   display: flex;
+  align-items: stretch;
   flex-wrap: wrap;
   margin: 0 -10px;
   ${theme.mediaQuery.tablet} {
