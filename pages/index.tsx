@@ -4,7 +4,7 @@ import { Splash } from '../components/Splash'
 import { SplashLayout, BodyLayout, NavbarLayout } from '../components/Layout'
 import { Stats } from '../components/Stats'
 import { getEventProps } from '../lib/events'
-import { CompaniesComp } from '../components/Companies'
+import { CompanyComp } from '../components/Company'
 import { UniversityComp } from '../components/University'
 
 type PromiseLike<T> = {
@@ -32,7 +32,7 @@ const IndexPage: React.FC<Props> = ({ events }) => (
     <BodyLayout>
       <Stats />
       <EventComp events={events} />
-      <CompaniesComp />
+      <CompanyComp />
       <UniversityComp />
     </BodyLayout>
   </>

@@ -20,7 +20,7 @@ const logos = [
   'Citadel.png',
 ]
 
-export const CompaniesComp = () => {
+export const CompanyComp = () => {
   return (
     <Section>
       <H1>Past Speakers From</H1>
