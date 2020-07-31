@@ -1,3 +1,5 @@
+import { useMediaPredicate } from 'react-media-hook'
+
 export const baseFontSize = 16
 
 export const theme = {
@@ -14,5 +16,8 @@ export const theme = {
     desktop: '@media screen and (min-width: 1024px)',
   },
 }
+
+export const useIsTablet = () => useMediaPredicate('(min-width: 768px)')
+export const useIsdesktop = () => useMediaPredicate('(min-width: 1024px)')
 
 export type Theme = typeof theme

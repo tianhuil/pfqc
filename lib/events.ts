@@ -2,7 +2,9 @@ import moment, { Moment } from 'moment-timezone'
 
 export interface Time {
   city: string
+  airport: string
   time: string
+  time24: string
   dayOffset: string | null
 }
 
@@ -24,13 +26,15 @@ export interface Event {
 moment.updateLocale('en-US', null)
 const baseTimezone = 'America/New_York'
 
-const toTime = (m: Moment, tz: string): Time => {
+const toTime = (m: Moment, tz: string, airport: string): Time => {
   const sameDayAsBase =
     m.tz(baseTimezone).format('DD') !== m.tz(tz).format('DD')
 
   return {
     city: tz.split('/')[1].replace('_', ' '),
+    airport,
     time: m.tz(tz).format('h:mm A'),
+    time24: m.tz(tz).format('HH:mm'),
     // HACK: the day can only be one forward or nothing from NYC
     dayOffset: sameDayAsBase ? '+1' : null,
   }
@@ -38,10 +42,10 @@ const toTime = (m: Moment, tz: string): Time => {
 
 const toTimes = (m: Moment): Time4 => {
   return [
-    toTime(m, 'Asia/Singapore'),
-    toTime(m, 'Europe/London'),
-    toTime(m, 'America/New_York'),
-    toTime(m, 'America/Los_Angeles'),
+    toTime(m, 'America/Los_Angeles', 'LAX'),
+    toTime(m, 'America/New_York', 'NYC'),
+    toTime(m, 'Europe/London', 'LHR'),
+    toTime(m, 'Asia/Singapore', 'SIN'),
   ]
 }
 

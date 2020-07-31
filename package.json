@@ -15,7 +15,8 @@
     "next": "latest",
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-media-hook": "^0.4.7"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",

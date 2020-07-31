@@ -20,7 +20,10 @@ const Capsule = styled.div<CapsuleProps>`
 
   font-size: ${(props) => props.fontSize}px;
   line-height: ${(props) => props.fontSize}px;
-  padding: ${(props) => props.fontSize}px ${(props) => props.fontSize * 3}px;
+  padding: ${(props) => props.fontSize}px ${(props) => props.fontSize * 2}px;
+  ${theme.mediaQuery.tablet} {
+    padding: ${(props) => props.fontSize}px ${(props) => props.fontSize * 3}px;
+  }
 `
 
 export const LargeButton: React.FC = ({ children }) => {
@@ -38,11 +41,11 @@ export const Span = styled.span`
   color: ${theme.color.black};
   font-size: ${theme.fontSize()};
   line-height: ${theme.lineHeight()};
+  color: rgb(0, 0, 0, 0.8);
 `
 
 export const P = styled(Span)`
   display: block;
-  color: rgb(0, 0, 0, 0.8);
 `
 
 export const H1 = styled.div`

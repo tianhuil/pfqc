@@ -1,5 +1,16 @@
 import React from 'react'
-import { H1, P, Span, Section, Col, Row, H2, SmallButton, theme } from './style'
+import {
+  H1,
+  P,
+  Span,
+  Section,
+  Col,
+  Row,
+  H2,
+  SmallButton,
+  theme,
+  useIsTablet,
+} from './style'
 import styled from '@emotion/styled'
 import { Event, Speaker, Time } from '../lib/events'
 
@@ -55,12 +66,18 @@ const DetailStyle = styled.div`
   .dayOffset {
     display: inline-block;
     font-weight: 500;
-    width: 10%;
+    width: 15%;
+    ${theme.mediaQuery.tablet} {
+      width: 10%;
+    }
   }
 
   .city {
     display: inline-block;
-    width: 50%;
+    width: 45%;
+    ${theme.mediaQuery.tablet} {
+      width: 50%;
+    }
   }
 
   .time-detail {
@@ -92,14 +109,30 @@ const SpeakerComp: React.FC<Speaker> = ({ name, title, company, image }) => {
   )
 }
 
-const TimeComp: React.FC<Time> = ({ time, city, dayOffset }) => {
+const TimeComp: React.FC<Time> = ({
+  time,
+  time24,
+  city,
+  airport,
+  dayOffset,
+}) => {
+  const isTablet = useIsTablet()
+
   return (
     <div className="time-detail">
-      <Span className="time">{time}</Span>
+      {isTablet ? (
+        <Span className="time time-tablet">{time}</Span>
+      ) : (
+        <Span className="time time-phone">{time24}</Span>
+      )}
       <Span className="dayOffset">
         <sup>&nbsp;{dayOffset}</sup>
       </Span>
-      <Span className="city">{city}</Span>
+      {isTablet ? (
+        <Span className="city">{city}</Span>
+      ) : (
+        <Span className="city">{airport}</Span>
+      )}
     </div>
   )
 }
