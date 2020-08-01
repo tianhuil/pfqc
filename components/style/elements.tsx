@@ -73,19 +73,18 @@ export const CenterSmallButton: React.FC = ({ children }) => {
   )
 }
 
-export const Span = styled.span`
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  color: ${theme.color.black};
-  font-size: ${theme.fontSize()};
-  line-height: ${theme.lineHeight()};
-  color: rgb(0, 0, 0, 0.8);
-`
+const textStyle = {
+  fontFamily: ['Roboto', 'sans-serif'],
+  fontStyle: 'normal',
+  fontWeight: 300,
+  fontSize: theme.fontSize(),
+  lineHeight: theme.lineHeight(),
+  color: 'rgb(0, 0, 0, 0.8)',
+}
 
-export const P = styled(Span)`
-  display: block;
-`
+export const Span = styled.span(textStyle)
+
+export const P = styled.p(textStyle)
 
 export const H1 = styled.h1`
   font-family: 'Poppins', sans-serif;
