@@ -42,15 +42,17 @@ export const Navbar = () => {
       <div className="logo">
         <img src="images/Logo.png"></img>
       </div>
-      {isTablet ? (
-        <div className="menu">
-          <div className="link">Speakers</div>
-          <div className="link">Companies</div>
-          <div className="link">Universities</div>
-          <div className="link">Mission</div>
-          <div className="link link-main">Register</div>
-        </div>
-      ) : null}
+      <div className="menu">
+        {isTablet ? (
+          <>
+            <div className="link">Speakers</div>
+            <div className="link">Companies</div>
+            <div className="link">Universities</div>
+            <div className="link">Mission</div>
+          </>
+        ) : null}
+        <div className="link link-main">Register</div>
+      </div>
     </Style>
   )
 }
