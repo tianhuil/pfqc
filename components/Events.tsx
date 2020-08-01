@@ -167,7 +167,7 @@ export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
   return (
     <Style>
       <Section>
-        <H1>Conference Speakers</H1>
+        <H1>Princeton Fintech & Quant Conference</H1>
         <Row>
           <Col size={4} desktop={{ left: 1, right: 1, size: 2 }}>
             <Text>

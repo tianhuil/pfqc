@@ -80,7 +80,6 @@ const textStyle = {
   fontSize: theme.fontSize(),
   lineHeight: theme.lineHeight(),
   color: 'rgb(0, 0, 0, 0.8)',
-  orphan: 4,
 }
 
 export const Span = styled.span(textStyle)
@@ -95,8 +94,8 @@ export const H1 = styled.h1`
   color: rgb(0, 0, 0, 0.6);
 
   font-size: ${theme.fontSize(1.5)};
-  line-height: ${theme.lineHeight(2)};
-  margin: ${theme.lineHeight(1)} auto;
+  line-height: ${theme.lineHeight(1.5)};
+  margin: ${theme.lineHeight(1.5)} auto;
 
   ${theme.mediaQuery.tablet} {
     font-size: ${theme.fontSize(2)};
@@ -118,9 +117,11 @@ export const H2 = styled.h2`
   text-align: center;
   color: rgb(0, 0, 0, 0.6);
 
-  font-size: 18px;
-  line-height: 24px;
-  margin: 24px auto;
+  ${theme.mediaQuery.tablet} {
+    font-size: ${theme.fontSize(1.2)};
+    line-height: ${theme.lineHeight(1.2)};
+    margin: ${theme.lineHeight(1.2)} auto;
+  }
 
   ${theme.mediaQuery.tablet} {
     font-size: ${theme.fontSize(1.5)};
