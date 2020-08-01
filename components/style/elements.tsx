@@ -41,6 +41,20 @@ export const SmallButton: React.FC = ({ children }) => {
   return <Capsule fontSize={14}>{children}</Capsule>
 }
 
+export const CenterSmallButton: React.FC = ({ children }) => {
+  const Style = styled.div`
+    margin: ${theme.lineHeight(2)} 0;
+  `
+
+  return (
+    <Style>
+      <Center>
+        <SmallButton>{children}</SmallButton>
+      </Center>
+    </Style>
+  )
+}
+
 export const Span = styled.span`
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -55,7 +69,7 @@ export const P = styled(Span)`
   display: block;
 `
 
-export const H1 = styled.div`
+export const H1 = styled.h1`
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -79,7 +93,7 @@ export const H1 = styled.div`
   }
 `
 
-export const H2 = styled.div`
+export const H2 = styled.h2`
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
