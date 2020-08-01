@@ -7,18 +7,15 @@ import {
   Col,
   Row,
   H2,
-  SmallButton,
+  CenterSmallButton,
   theme,
   useIsTablet,
-  LargeButton,
-  Center,
 } from './style'
 import styled from '@emotion/styled'
 import { Event, Speaker, Time } from '../lib/events'
 
 const Text = styled(P)`
   text-align: justify;
-  margin-bottom: ${theme.lineHeight(1)};
 `
 
 const colMargin = theme.lineHeight(1)
@@ -91,11 +88,6 @@ const DetailStyle = styled.div`
     margin: ${theme.lineHeight()} 0;
   }
 
-  .button {
-    display: flex;
-    align-items: center;
-  }
-
   i.fa {
     color: ${theme.color.orange};
     font-size: 24px;
@@ -160,16 +152,14 @@ const Detail: React.FC<Event> = ({ times }) => {
         <TimeComp {...time} />
       ))}
       <Location />
-      <div className="button">
-        <SmallButton>Register</SmallButton>
-      </div>
+      <CenterSmallButton>Register</CenterSmallButton>
     </DetailStyle>
   )
 }
 
 const Style = styled.div`
   .event {
-    margin-top: ${theme.lineHeight(3)};
+    margin-top: ${theme.lineHeight(2)};
   }
 `
 
@@ -188,9 +178,7 @@ export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
             </Text>
           </Col>
         </Row>
-        <Center>
-          <SmallButton>Register</SmallButton>
-        </Center>
+        <CenterSmallButton>Register</CenterSmallButton>
         {events.map((event) => (
           <div className="event">
             <H2>{event.date}</H2>

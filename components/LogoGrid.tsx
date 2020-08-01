@@ -9,7 +9,7 @@ const Style = styled.div`
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin: ${theme.lineHeight()} 0;
+    margin-bottom: ${theme.lineHeight(2)};
   }
   img {
     max-width: 70%;

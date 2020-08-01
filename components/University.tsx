@@ -1,5 +1,5 @@
 import React from 'react'
-import { H1, Section } from './style'
+import { H1, Section, CenterSmallButton } from './style'
 import { LogoGrid } from './LogoGrid'
 
 const logos = [
@@ -26,6 +26,7 @@ export const UniversityComp = () => {
     <Section>
       <H1>Past Students From</H1>
       <LogoGrid logos={logos.map((logo) => 'images/university/' + logo)} />
+      <CenterSmallButton>Register</CenterSmallButton>
     </Section>
   )
 }
