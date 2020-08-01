@@ -16,7 +16,6 @@ import { Event, Speaker, Time } from '../lib/events'
 
 const Text = styled(P)`
   text-align: justify;
-  orphans: 4;
 `
 
 const colMargin = theme.lineHeight(1)

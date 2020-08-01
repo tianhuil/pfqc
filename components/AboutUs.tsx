@@ -3,7 +3,6 @@ import { Section, H1, Row, Col, P, theme } from './style'
 import styled from '@emotion/styled'
 
 const Text = styled(P)`
-  text-align: justify;
   margin-bottom: ${theme.lineHeight()};
 `
 

@@ -80,11 +80,12 @@ const textStyle = {
   fontSize: theme.fontSize(),
   lineHeight: theme.lineHeight(),
   color: 'rgb(0, 0, 0, 0.8)',
+  orphan: 4,
 }
 
 export const Span = styled.span(textStyle)
 
-export const P = styled.p(textStyle)
+export const P = styled.span({ display: 'block', ...textStyle })
 
 export const H1 = styled.h1`
   font-family: 'Poppins', sans-serif;
