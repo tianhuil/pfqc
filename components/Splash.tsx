@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { LargeButton } from './style/elements'
+import { LargeButton, Center } from './style/elements'
 
 const Style = styled.div`
   width: 100%;
@@ -15,17 +15,15 @@ const Position = styled.div`
   width: 100%;
   top: calc(70%);
   position: absolute;
-  /* Flex Box */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `
 
 export const Splash = () => {
   return (
     <Style>
       <Position>
-        <LargeButton>Register Now</LargeButton>
+        <Center>
+          <LargeButton>Register Now</LargeButton>
+        </Center>
       </Position>
     </Style>
   )

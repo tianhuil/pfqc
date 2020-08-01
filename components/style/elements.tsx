@@ -26,6 +26,13 @@ const Capsule = styled.div<CapsuleProps>`
   }
 `
 
+export const Center = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 export const LargeButton: React.FC = ({ children }) => {
   return <Capsule fontSize={16}>{children}</Capsule>
 }

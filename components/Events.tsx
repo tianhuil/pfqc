@@ -10,12 +10,15 @@ import {
   SmallButton,
   theme,
   useIsTablet,
+  LargeButton,
+  Center,
 } from './style'
 import styled from '@emotion/styled'
 import { Event, Speaker, Time } from '../lib/events'
 
 const Text = styled(P)`
   text-align: justify;
+  margin-bottom: ${theme.lineHeight(1)};
 `
 
 const colMargin = theme.lineHeight(1)
@@ -185,6 +188,9 @@ export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
             </Text>
           </Col>
         </Row>
+        <Center>
+          <SmallButton>Register</SmallButton>
+        </Center>
         {events.map((event) => (
           <div className="event">
             <H2>{event.date}</H2>
