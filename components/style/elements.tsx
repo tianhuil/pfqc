@@ -34,11 +34,29 @@ export const Center = styled.div`
 `
 
 export const LargeButton: React.FC = ({ children }) => {
-  return <Capsule fontSize={16}>{children}</Capsule>
+  return (
+    <a
+      target="_blank"
+      href={
+        'https://www.eventbrite.com/e/pfqc-webinar-series-tickets-113711903364'
+      }
+    >
+      <Capsule fontSize={16}>{children}</Capsule>
+    </a>
+  )
 }
 
 export const SmallButton: React.FC = ({ children }) => {
-  return <Capsule fontSize={14}>{children}</Capsule>
+  return (
+    <a
+      target="_blank"
+      href={
+        'https://www.eventbrite.com/e/pfqc-webinar-series-tickets-113711903364'
+      }
+    >
+      <Capsule fontSize={14}>{children}</Capsule>
+    </a>
+  )
 }
 
 export const CenterSmallButton: React.FC = ({ children }) => {
