@@ -94,6 +94,7 @@ const DetailStyle = styled.div`
   }
 
   i.fa {
+    color: ${theme.color.orange};
     font-size: 24px;
   }
 `
@@ -141,7 +142,7 @@ const Location: React.FC = () => {
   return (
     <div className="location-detail">
       <Span className="time">
-        <i className="fa fa-map-marker"></i>
+        <i className="fa fa-lg fa-map-marker"></i>
       </Span>
       <Span className="dayOffset" />
       <Span className="city">Webinar</Span>
