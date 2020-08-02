@@ -2,12 +2,15 @@ import { useMediaPredicate } from 'react-media-hook'
 
 export const baseFontSize = 16
 
+// ,
+
 export const theme = {
   fontSize: (factor: number = 1) => `${baseFontSize * factor}px`,
   lineHeight: (factor: number = 1) => `${baseFontSize * 1.5 * factor}px`,
   navbarHeight: `${baseFontSize * 5}px`,
   color: {
-    orange: '#e77500',
+    orange: '#e77500', // 'rgb(237, 106, 31)', // '#e77500'
+    orangeFaded: 'rgb(237, 124, 58)', // '#e77500e0' on white background
     white: '#fff',
     black: '#091133',
   },
