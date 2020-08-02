@@ -14,10 +14,6 @@ import {
 import styled from '@emotion/styled'
 import { Event, Speaker, Time } from '../lib/events'
 
-const Text = styled(P)`
-  text-align: justify;
-`
-
 const colMargin = theme.lineHeight(1)
 
 const SpeakerStyle = styled.div`
@@ -167,18 +163,6 @@ export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
   return (
     <Style>
       <Section>
-        <H1>Princeton Fintech & Quant Conference</H1>
-        <Row>
-          <Col size={4} desktop={{ left: 1, right: 1, size: 2 }}>
-            <Text>
-              After 10 years of conferences in Princeton and Chicago, the
-              Princeton Fintech & Quant Conference is launching a virtual series
-              over 8 sessions starting September 2020. We will continue with our
-              usual Princeton, NJ conference in the spring of 2021.
-            </Text>
-          </Col>
-        </Row>
-        <CenterSmallButton>Register</CenterSmallButton>
         {events.map((event) => (
           <div className="event">
             <H2>{event.date}</H2>
