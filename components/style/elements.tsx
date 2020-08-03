@@ -122,11 +122,9 @@ export const H2 = styled.h2`
   text-align: center;
   color: rgb(0, 0, 0, 0.6);
 
-  ${theme.mediaQuery.tablet} {
-    font-size: ${theme.fontSize(1.2)};
-    line-height: ${theme.lineHeight(1.2)};
-    margin: ${theme.lineHeight(1.2)} auto;
-  }
+  font-size: ${theme.fontSize(1.2)};
+  line-height: ${theme.lineHeight(1.2)};
+  margin: ${theme.lineHeight(1.2)} auto;
 
   ${theme.mediaQuery.tablet} {
     font-size: ${theme.fontSize(1.5)};
