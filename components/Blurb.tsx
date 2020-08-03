@@ -1,10 +1,12 @@
 import styled from '@emotion/styled'
 import React from 'react'
 
-import { CenterSmallButton, Col, H1, P, Row, Section } from './style'
+import { CenterSmallButton, Col, H1, P, Row, Section, theme } from './style'
 
 const Text = styled(P)`
-  text-align: justify;
+  ${theme.mediaQuery.tablet} {
+    text-align: justify;
+  }
 `
 
 export const BlurbComp = () => {
@@ -17,7 +19,7 @@ export const BlurbComp = () => {
             After 10 years of conferences in Princeton and Chicago, the
             Princeton Fintech & Quant Conference is launching a virtual series
             over 8 sessions starting September 2020. We will continue with our
-            usual Princeton, NJ conference in the spring of 2021.
+            usual in-person Princeton, NJ conference in the spring of 2021.
           </Text>
         </Col>
       </Row>
