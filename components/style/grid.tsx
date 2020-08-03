@@ -19,9 +19,6 @@ interface ColSpacing {
   left?: number
   size: number
   right?: number
-  top?: string
-  bottom?: string
-  padding?: string
 }
 
 interface ColProps extends ColSpacing {
@@ -29,16 +26,19 @@ interface ColProps extends ColSpacing {
   desktop?: ColSpacing
 }
 
-const colStyle = (
-  { left, size, right, padding }: ColSpacing,
-  paddingDefault = '20px'
-) => ({
-  margin: [0, (right ?? 0) * 25, 0, (left ?? 0) * 25]
-    .map((x) => `${x}%`)
-    .join(' '),
-  width: `${size * 25}%`,
-  padding: `0 ${padding ?? paddingDefault}`,
-})
+const colStyle = (padding: string, spacing?: ColSpacing) => {
+  if (!spacing) return { padding }
+
+  const { left, size, right } = spacing
+
+  return {
+    margin: [0, (right ?? 0) * 25, 0, (left ?? 0) * 25]
+      .map((x) => `${x}%`)
+      .join(' '),
+    width: `${size * 25}%`,
+    padding,
+  }
+}
 
 /**
  * A 4-col column layout
@@ -52,9 +52,9 @@ export const Col: React.FC<ColProps> = ({
   return (
     <div
       css={css({
-        ...colStyle(phone, '10px'),
-        ...(tablet && { [theme.mediaQuery.tablet]: colStyle(tablet) }),
-        ...(desktop && { [theme.mediaQuery.desktop]: colStyle(desktop) }),
+        ...colStyle('0 10px;', phone),
+        [theme.mediaQuery.tablet]: colStyle('0 20px;', tablet),
+        [theme.mediaQuery.desktop]: colStyle('0 20px;', desktop),
       })}
     >
       {children}
