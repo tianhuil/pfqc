@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section, H1, Row, Col, P, theme } from './style'
+import { Section, H1, Row, Col, P, theme, CenterSmallButton } from './style'
 import styled from '@emotion/styled'
 
 const Style = styled.div`
@@ -52,6 +52,7 @@ export const AboutUs = () => {
             <div className="img" />
           </Col>
         </Row>
+        <CenterSmallButton>Register</CenterSmallButton>
       </Section>
     </Style>
   )
