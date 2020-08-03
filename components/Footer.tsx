@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import { Col, Row, P, Section, theme } from './style'
 
 const Style = styled.div`
+  margin-top: -${theme.lineHeight(2)};
+
   .follow {
     font-weight: 500;
   }
