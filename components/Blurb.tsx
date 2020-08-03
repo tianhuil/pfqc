@@ -1,9 +1,11 @@
 import styled from '@emotion/styled'
 import React from 'react'
 
-import { CenterSmallButton, Col, H1, P, Row, Section, theme } from './style'
+import { Col, H1, P, Row, Section, theme, CenterSmallButton } from './style'
+import { FeatureComp } from './Features'
 
 const Text = styled(P)`
+  margin-bottom: ${theme.lineHeight()};
   ${theme.mediaQuery.tablet} {
     text-align: justify;
   }
@@ -23,6 +25,7 @@ export const BlurbComp = () => {
           </Text>
         </Col>
       </Row>
+      <FeatureComp />
       <CenterSmallButton>Register</CenterSmallButton>
     </Section>
   )

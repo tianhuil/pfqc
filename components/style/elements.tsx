@@ -141,7 +141,7 @@ export const H2 = styled.h2`
 
 export interface SectionProps {
   marginYMobile?: number
-  marginYTable?: number
+  marginYTablet?: number
   marginYDesktop?: number
 }
 
@@ -150,7 +150,7 @@ export const Section = styled.div<SectionProps>`
   max-width: 440px;
 
   ${theme.mediaQuery.tablet} {
-    margin: ${(p) => theme.lineHeight(p.marginYTable ?? 2)} auto;
+    margin: ${(p) => theme.lineHeight(p.marginYTablet ?? 2)} auto;
     max-width: 440px;
   }
   ${theme.mediaQuery.desktop} {
