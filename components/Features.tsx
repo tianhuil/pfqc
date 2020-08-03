@@ -7,7 +7,8 @@ const FeatureStyle = styled.div`
   flex-direction: row;
   ${theme.mediaQuery.desktop} {
     flex-direction: column;
-    width: 33.33%;
+    flex-basis: 0;
+    flex-grow: 1;
   }
   margin: ${theme.lineHeight()} 0;
 
