@@ -22,7 +22,7 @@ const logos = [
 
 export const CompanyComp = () => {
   return (
-    <Section>
+    <Section id="company">
       <H1>Past Speakers From</H1>
       <LogoGrid logos={logos.map((logo) => 'images/company/' + logo)} />
       <CenterSmallButton>Register</CenterSmallButton>

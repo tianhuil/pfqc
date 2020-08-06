@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import styled from '@emotion/styled'
 import { theme } from './theme'
+import { eventbriteUrl } from '../../lib/util'
 
 interface CapsuleProps {
   fontSize: number
@@ -40,12 +41,7 @@ export const Center = styled.div`
 
 export const LargeButton: React.FC = ({ children }) => {
   return (
-    <a
-      target="_blank"
-      href={
-        'https://www.eventbrite.com/e/pfqc-webinar-series-tickets-113711903364'
-      }
-    >
+    <a target="_blank" href={eventbriteUrl}>
       <Capsule fontSize={16}>{children}</Capsule>
     </a>
   )
@@ -53,12 +49,7 @@ export const LargeButton: React.FC = ({ children }) => {
 
 export const SmallButton: React.FC = ({ children }) => {
   return (
-    <a
-      target="_blank"
-      href={
-        'https://www.eventbrite.com/e/pfqc-webinar-series-tickets-113711903364'
-      }
-    >
+    <a target="_blank" href={eventbriteUrl}>
       <Capsule fontSize={14}>{children}</Capsule>
     </a>
   )

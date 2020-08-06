@@ -23,7 +23,7 @@ const logos = [
 
 export const UniversityComp = () => {
   return (
-    <Section>
+    <Section id="university">
       <H1>Past Students From</H1>
       <LogoGrid logos={logos.map((logo) => 'images/university/' + logo)} />
       <CenterSmallButton>Register</CenterSmallButton>

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { theme, useIsTablet } from './style'
+import { eventbriteUrl } from '../lib/util'
 
 const Style = styled.div`
   display: flex;
@@ -35,6 +36,13 @@ const Style = styled.div`
   }
 `
 
+const scrollToId = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  })
+}
+
 export const Navbar = () => {
   const isTablet = useIsTablet()
   return (
@@ -45,13 +53,23 @@ export const Navbar = () => {
       <div className="menu">
         {isTablet ? (
           <>
-            <div className="link">Speakers</div>
-            <div className="link">Companies</div>
-            <div className="link">Universities</div>
-            <div className="link">Mission</div>
+            <div className="link" onClick={() => scrollToId('event')}>
+              Events
+            </div>
+            <div className="link" onClick={() => scrollToId('company')}>
+              Companies
+            </div>
+            <div className="link" onClick={() => scrollToId('university')}>
+              Universities
+            </div>
+            <div className="link" onClick={() => scrollToId('aboutus')}>
+              Mission
+            </div>
           </>
         ) : null}
-        <div className="link link-main">Register</div>
+        <a target="_blank" href={eventbriteUrl}>
+          <div className="link link-main">Register</div>
+        </a>
       </div>
     </Style>
   )

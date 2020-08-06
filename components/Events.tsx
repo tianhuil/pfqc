@@ -162,7 +162,7 @@ const Style = styled.div`
 export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
   return (
     <Style>
-      <Section>
+      <Section id="event">
         {events.map((event) => (
           <div className="event">
             <H2>{event.date}</H2>

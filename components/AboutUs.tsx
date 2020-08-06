@@ -26,7 +26,7 @@ const Style = styled.div`
 export const AboutUs = () => {
   return (
     <Style>
-      <Section>
+      <Section id="aboutus">
         <H1>Our Mission</H1>
         <Row>
           <Col size={4} desktop={{ size: 2 }}>
