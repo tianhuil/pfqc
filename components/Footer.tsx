@@ -34,9 +34,15 @@ export const Footer = () => {
           <Col size={2}>
             <P className="follow">Follow Us</P>
             <div className="social">
-              <span className="fab fa-twitter-square" />
-              <span className="fab fa-facebook-square" />
-              <span className="fab fa-linkedin-square" />
+              <a href="https://twitter.com/pqtconf">
+                <span className="fab fa-twitter-square" />
+              </a>
+              <a href="https://www.facebook.com/PrincetonQuantTradingConference/">
+                <span className="fab fa-facebook-square" />
+              </a>
+              <a href="https://www.linkedin.com/groups/6985127/">
+                <span className="fab fa-linkedin-square" />
+              </a>
             </div>
           </Col>
         </Row>
