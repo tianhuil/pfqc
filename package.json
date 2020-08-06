@@ -2,6 +2,9 @@
   "name": "pfqc",
   "version": "0.1.0",
   "private": true,
+  "engines" : {
+    "node" : "^12.13.1"
+  },
   "scripts": {
     "dev": "next dev -p 3030",
     "test": "jest",
