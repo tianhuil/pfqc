@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { theme, useIsTablet } from './style'
+import { theme, useIsTablet, P } from './style'
 import { eventbriteUrl } from '../lib/util'
 
 const Style = styled.div`
@@ -10,7 +10,7 @@ const Style = styled.div`
   height: 100%;
 
   .logo {
-    max-height: 80%;
+    max-height: 100%;
     img {
       width: auto;
       height: ${theme.lineHeight(2)};
@@ -30,7 +30,6 @@ const Style = styled.div`
   }
   .link.link-main {
     font-weight: 500;
-    margin-right: ${theme.lineHeight()};
     text-transform: uppercase;
     color: ${theme.color.orange};
   }
@@ -48,27 +47,27 @@ export const Navbar = () => {
   return (
     <Style>
       <div className="logo">
-        <img src="images/Logo.png"></img>
+        <img src="/images/logo/full.svg"></img>
       </div>
       <div className="menu">
         {isTablet ? (
           <>
-            <div className="link" onClick={() => scrollToId('event')}>
+            <P className="link" onClick={() => scrollToId('event')}>
               Events
-            </div>
-            <div className="link" onClick={() => scrollToId('company')}>
+            </P>
+            <P className="link" onClick={() => scrollToId('company')}>
               Companies
-            </div>
-            <div className="link" onClick={() => scrollToId('university')}>
+            </P>
+            <P className="link" onClick={() => scrollToId('university')}>
               Universities
-            </div>
-            <div className="link" onClick={() => scrollToId('aboutus')}>
+            </P>
+            <P className="link" onClick={() => scrollToId('aboutus')}>
               Mission
-            </div>
+            </P>
           </>
         ) : null}
         <a target="_blank" href={eventbriteUrl}>
-          <div className="link link-main">Register</div>
+          <P className="link link-main">Register</P>
         </a>
       </div>
     </Style>
