@@ -30,11 +30,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link
-            rel="icon"
-            type="image/svg"
-            href="/images/logo/icon-borderless.svg"
-          />
+          <link rel="icon" type="image/svg" href="/images/logo/mini.svg" />
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Roboto:wght@300;500&display=swap"
             rel="stylesheet"
