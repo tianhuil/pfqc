@@ -189,8 +189,8 @@ export const getEventProps = (): Event[] => {
     toEvent(moment('2020-02-27T16:00:00Z'), [
       {
         name: 'TBA',
-        title: 'TBA',
-        company: 'TBA',
+        title: '',
+        company: '',
         image: 'images/headshot/TBA.png',
       },
       {
@@ -209,8 +209,8 @@ export const getEventProps = (): Event[] => {
     toEvent(moment('2020-03-27T16:00:00Z'), [
       {
         name: 'TBA',
-        title: 'TBA',
-        company: 'TBA',
+        title: '',
+        company: '',
         image: 'images/headshot/TBA.png',
       },
       {
@@ -229,8 +229,8 @@ export const getEventProps = (): Event[] => {
     toEvent(moment('2020-04-24T16:00:00Z'), [
       {
         name: 'TBA',
-        title: 'TBA',
-        company: 'TBA',
+        title: '',
+        company: '',
         image: 'images/headshot/TBA.png',
       },
       {
