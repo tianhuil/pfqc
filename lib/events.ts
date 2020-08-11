@@ -65,7 +65,7 @@ export const getEventProps = (): Event[] => {
   const m = moment('2020-09-26T16:00:00Z')
 
   return [
-    toEvent(moment('2020-09-26T16:00:00Z'), [
+    toEvent(moment('2020-09-26T15:00:00Z'), [
       {
         name: 'Christina Qi',
         title: 'Co-Founder',
@@ -85,7 +85,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Thomas.png',
       },
     ]),
-    toEvent(moment('2020-10-09T16:00:00Z'), [
+    toEvent(moment('2020-10-09T17:30:00Z'), [
       {
         name: 'Bruno Dupire',
         title: 'Head of Quantitative Research',
@@ -105,7 +105,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Zhen.png',
       },
     ]),
-    toEvent(moment('2020-10-24T16:00:00Z'), [
+    toEvent(moment('2020-10-24T15:00:00Z'), [
       {
         name: 'Nick Alonso',
         title: 'TBA',
@@ -125,7 +125,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Miller.png',
       },
     ]),
-    toEvent(moment('2020-11-21T16:00:00Z'), [
+    toEvent(moment('2020-11-21T15:00:00Z'), [
       {
         name: 'Boris Lerner',
         title: 'Global Head of Quantitative Equity Research',
@@ -145,7 +145,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Sangha.png',
       },
     ]),
-    toEvent(moment('2020-12-05T16:00:00Z'), [
+    toEvent(moment('2020-12-05T15:00:00Z'), [
       {
         name: 'Mathew Granade',
         title: 'Chief Market Intelligence Officer',
@@ -166,7 +166,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Pelts.png',
       },
     ]),
-    toEvent(moment('2020-01-31T16:00:00Z'), [
+    toEvent(moment('2020-01-31T15:00:00Z'), [
       {
         name: 'Dr. Harvey Stein	',
         title: 'Head, Quantitative Risk Analytics',
@@ -186,7 +186,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Benzschawel.png',
       },
     ]),
-    toEvent(moment('2020-02-27T16:00:00Z'), [
+    toEvent(moment('2020-02-27T15:00:00Z'), [
       {
         name: 'TBA',
         title: '',
@@ -206,7 +206,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Fleiss.png',
       },
     ]),
-    toEvent(moment('2020-03-27T16:00:00Z'), [
+    toEvent(moment('2020-03-27T15:00:00Z'), [
       {
         name: 'TBA',
         title: '',
@@ -226,7 +226,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Izydorcik.png',
       },
     ]),
-    toEvent(moment('2020-04-24T16:00:00Z'), [
+    toEvent(moment('2020-04-24T15:00:00Z'), [
       {
         name: 'TBA',
         title: '',
