@@ -74,8 +74,8 @@ export const getEventProps = (): Event[] => {
       },
       {
         name: 'John Birge',
-        title: 'Chief Risk Officer',
-        company: 'Credibly',
+        title: 'Principal and Co-Founder',
+        company: 'Quantstar',
         image: 'images/headshot/Birge.png',
       },
       {
