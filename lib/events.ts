@@ -147,8 +147,8 @@ export const getEventProps = (): Event[] => {
     ]),
     toEvent(moment('2020-12-05T16:00:00Z'), [
       {
-        name: 'Mathew Granade',
-        title: 'Chief Market Intelligence Officer',
+        name: 'Mike Soss',
+        title: 'Head of Fusion (Internal Alpha Capture)',
         company: 'Point72',
         image: 'images/headshot/Granade.png',
       },
