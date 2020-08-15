@@ -130,7 +130,7 @@ export const getEventProps = (): Event[] => {
         name: 'Mike Soss',
         title: 'Head of Fusion (Internal Alpha Capture)',
         company: 'Point72',
-        image: 'images/headshot/Granade.png',
+        image: 'images/headshot/Soss.png',
       },
       {
         name: 'Ali Hirsa',
