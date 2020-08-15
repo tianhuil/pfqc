@@ -107,10 +107,10 @@ export const getEventProps = (): Event[] => {
     ]),
     toEvent(moment('2020-10-24T15:00:00Z'), [
       {
-        name: 'Nick Alonso',
-        title: 'TBA',
-        company: 'TBA',
-        image: 'images/headshot/Alonso.png',
+        name: 'Boris Lerner',
+        title: 'Global Head of Quantitative Equity Research',
+        company: 'Morgan Stanley',
+        image: 'images/headshot/Lerner.png',
       },
       {
         name: 'Chris Bemis',
@@ -127,10 +127,10 @@ export const getEventProps = (): Event[] => {
     ]),
     toEvent(moment('2020-11-21T16:00:00Z'), [
       {
-        name: 'Boris Lerner',
-        title: 'Global Head of Quantitative Equity Research',
-        company: 'Morgan Stanley',
-        image: 'images/headshot/Lerner.png',
+        name: 'Mike Soss',
+        title: 'Head of Fusion (Internal Alpha Capture)',
+        company: 'Point72',
+        image: 'images/headshot/Granade.png',
       },
       {
         name: 'Ali Hirsa',
@@ -147,10 +147,10 @@ export const getEventProps = (): Event[] => {
     ]),
     toEvent(moment('2020-12-05T16:00:00Z'), [
       {
-        name: 'Mike Soss',
-        title: 'Head of Fusion (Internal Alpha Capture)',
-        company: 'Point72',
-        image: 'images/headshot/Granade.png',
+        name: 'Nick Alonso',
+        title: 'TBA',
+        company: 'TBA',
+        image: 'images/headshot/Alonso.png',
       },
       {
         name: 'Yury Blyakhman',
