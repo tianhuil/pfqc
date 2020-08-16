@@ -85,6 +85,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Thomas.png',
       },
     ]),
+
     toEvent(moment('2020-10-09T17:30:00Z'), [
       {
         name: 'Bruno Dupire',
@@ -105,6 +106,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Zhen.png',
       },
     ]),
+
     toEvent(moment('2020-10-24T15:00:00Z'), [
       {
         name: 'Boris Lerner',
@@ -127,6 +129,7 @@ export const getEventProps = (): Event[] => {
     ]),
     toEvent(moment('2020-11-21T16:00:00Z'), [
       {
+
         name: 'Mike Soss',
         title: 'Head of Fusion (Internal Alpha Capture)',
         company: 'Point72',
