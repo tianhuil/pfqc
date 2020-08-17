@@ -65,11 +65,7 @@ export const getEventProps = (): Event[] => {
   const m = moment('2020-09-26T16:00:00Z')
 
   return [
-<<<<<<< HEAD
-    toEvent(moment('2020-09-26T16:00:00Z'), [
-=======
     toEvent(moment('2020-09-26T15:00:00Z'), [
->>>>>>> marius-branch
       {
         name: 'Christina Qi',
         title: 'Co-Founder',
@@ -78,8 +74,8 @@ export const getEventProps = (): Event[] => {
       },
       {
         name: 'John Birge',
-        title: 'Chief Risk Officer',
-        company: 'Credibly',
+        title: 'Principal and Co-Founder',
+        company: 'Quantstar',
         image: 'images/headshot/Birge.png',
       },
       {
@@ -89,11 +85,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Thomas.png',
       },
     ]),
-<<<<<<< HEAD
-    toEvent(moment('2020-10-09T16:00:00Z'), [
-=======
     toEvent(moment('2020-10-09T17:30:00Z'), [
->>>>>>> marius-branch
       {
         name: 'Bruno Dupire',
         title: 'Head of Quantitative Research',
@@ -113,16 +105,12 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Zhen.png',
       },
     ]),
-<<<<<<< HEAD
-    toEvent(moment('2020-10-24T16:00:00Z'), [
-=======
     toEvent(moment('2020-10-24T15:00:00Z'), [
->>>>>>> marius-branch
       {
-        name: 'Nick Alonso',
-        title: 'TBA',
-        company: 'TBA',
-        image: 'images/headshot/Alonso.png',
+        name: 'Boris Lerner',
+        title: 'Global Head of Quantitative Equity Research',
+        company: 'Morgan Stanley',
+        image: 'images/headshot/Lerner.png',
       },
       {
         name: 'Chris Bemis',
@@ -137,16 +125,12 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Miller.png',
       },
     ]),
-<<<<<<< HEAD
-    toEvent(moment('2020-11-21T16:00:00Z'), [
-=======
     toEvent(moment('2020-11-21T15:00:00Z'), [
->>>>>>> marius-branch
       {
-        name: 'Boris Lerner',
-        title: 'Global Head of Quantitative Equity Research',
-        company: 'Morgan Stanley',
-        image: 'images/headshot/Lerner.png',
+        name: 'Mike Soss',
+        title: 'Head of Fusion (Internal Alpha Capture)',
+        company: 'Point72',
+        image: 'images/headshot/Soss.png',
       },
       {
         name: 'Ali Hirsa',
@@ -161,16 +145,12 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Sangha.png',
       },
     ]),
-<<<<<<< HEAD
-    toEvent(moment('2020-12-05T16:00:00Z'), [
-=======
     toEvent(moment('2020-12-05T15:00:00Z'), [
->>>>>>> marius-branch
       {
-        name: 'Mathew Granade',
-        title: 'Chief Market Intelligence Officer',
-        company: 'Point72',
-        image: 'images/headshot/Granade.png',
+        name: 'Nick Alonso',
+        title: 'TBA',
+        company: 'TBA',
+        image: 'images/headshot/Alonso.png',
       },
       {
         name: 'Yury Blyakhman',
@@ -186,11 +166,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Pelts.png',
       },
     ]),
-<<<<<<< HEAD
-    toEvent(moment('2020-01-31T16:00:00Z'), [
-=======
     toEvent(moment('2020-01-31T15:00:00Z'), [
->>>>>>> marius-branch
       {
         name: 'Dr. Harvey Stein	',
         title: 'Head, Quantitative Risk Analytics',
@@ -210,11 +186,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Benzschawel.png',
       },
     ]),
-<<<<<<< HEAD
-    toEvent(moment('2020-02-27T16:00:00Z'), [
-=======
     toEvent(moment('2020-02-27T15:00:00Z'), [
->>>>>>> marius-branch
       {
         name: 'TBA',
         title: '',
@@ -234,11 +206,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Fleiss.png',
       },
     ]),
-<<<<<<< HEAD
-    toEvent(moment('2020-03-27T16:00:00Z'), [
-=======
     toEvent(moment('2020-03-27T15:00:00Z'), [
->>>>>>> marius-branch
       {
         name: 'TBA',
         title: '',
@@ -258,11 +226,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Izydorcik.png',
       },
     ]),
-<<<<<<< HEAD
-    toEvent(moment('2020-04-24T16:00:00Z'), [
-=======
     toEvent(moment('2020-04-24T15:00:00Z'), [
->>>>>>> marius-branch
       {
         name: 'TBA',
         title: '',
