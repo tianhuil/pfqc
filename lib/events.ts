@@ -80,8 +80,8 @@ export const getEventProps = (): Event[] => {
       },
       {
         name: 'Abraham Thomas',
-        title: 'Finance Change and Regulatory Reporting',
-        company: 'Deutsche Bank',
+        title: 'Chief Data Officer and Co-Founder',
+        company: 'Quandl',
         image: 'images/headshot/Thomas.png',
       },
     ]),
