@@ -107,3 +107,6 @@ dist
 with-typescript-app
 
 out
+
+# OSX
+.DS_Store
