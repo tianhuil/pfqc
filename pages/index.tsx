@@ -10,6 +10,7 @@ import { Banner } from '../components/Banner'
 import { AboutUs } from '../components/AboutUs'
 import { Footer } from '../components/Footer'
 import { BlurbComp } from '../components/Blurb'
+import { SponsorComp } from '../components/Sponsors'
 
 type PromiseLike<T> = {
   then(onfulfilled?: (value: T) => unknown): unknown
@@ -38,6 +39,7 @@ const IndexPage: React.FC<Props> = ({ events }) => (
       <BlurbComp />
       <EventComp events={events} />
       <Banner src="banner1.jpg" />
+      <SponsorComp />
       <CompanyComp />
       <Banner src="banner2.jpg" />
       <UniversityComp />
