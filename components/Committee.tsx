@@ -67,7 +67,7 @@ export const CommitteeComp: React.FC<{ committees: Committee[] }> = ({ committee
             <Section id="committee">
                 {committees.map((committee) => (
                     <div className="committee">
-                        <H2>{committee.team}</H2>
+                        <H2> Committee Members: {committee.team}</H2>
                         <Row>
                             {committee.members.map((member) => (
                                 <Col size={2} desktop={{ size: 1 }}>
