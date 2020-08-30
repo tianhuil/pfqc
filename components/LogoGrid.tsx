@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, theme, Col } from './style'
 import styled from '@emotion/styled'
 
-const Style = styled.div`
+export const Style = styled.div`
   .image {
     display: flex;
     flex-direction: column;
