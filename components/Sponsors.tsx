@@ -30,7 +30,7 @@ const logos = [
 export const SponsorComp = () => {
     return (
         <Section id="sponsors">
-            <H1>This Year's Sponsors</H1>
+            <H1>Sponsors</H1>
             <Style>
                 <Row>
                     {logos.map((logo) => (
