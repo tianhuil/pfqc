@@ -203,10 +203,10 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Mylnikov.png',
       },
       {
-        name: 'Alexander Fleiss',
-        title: 'CEO',
-        company: 'RebellionResearch',
-        image: 'images/headshot/Fleiss.png',
+        name: 'TBA',
+        title: '',
+        company: '',
+        image: 'images/headshot/TBA.png',
       },
     ]),
     toEvent(moment('2020-03-27T15:00:00Z'), [
