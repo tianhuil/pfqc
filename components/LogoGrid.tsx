@@ -23,8 +23,8 @@ export const LogoGrid: React.FC<{ logos: string[] }> = ({ logos }) => {
   return (
     <Style>
       <Row>
-        {logos.map((logo) => (
-          <Col size={2} desktop={{ size: 1 }}>
+        {logos.map((logo, k) => (
+          <Col size={2} desktop={{ size: 1 }} key={k}>
             <div className="image">
               <img src={logo} />
             </div>
