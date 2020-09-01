@@ -144,8 +144,8 @@ const Location: React.FC = () => {
 const Detail: React.FC<Event> = ({ times }) => {
   return (
     <DetailStyle>
-      {times.map((time) => (
-        <TimeComp {...time} />
+      {times.map((time, k) => (
+        <TimeComp {...time} key={k} />
       ))}
       <Location />
       <CenterSmallButton>Register</CenterSmallButton>
@@ -163,12 +163,12 @@ export const EventComp: React.FC<{ events: Event[] }> = ({ events }) => {
   return (
     <Style>
       <Section id="event">
-        {events.map((event) => (
-          <div className="event">
+        {events.map((event, k) => (
+          <div className="event" key={k}>
             <H2>{event.date}</H2>
             <Row>
-              {event.speakers.map((speaker) => (
-                <Col size={2} desktop={{ size: 1 }}>
+              {event.speakers.map((speaker, k) => (
+                <Col size={2} desktop={{ size: 1 }} key={k}>
                   <SpeakerComp {...speaker} />
                 </Col>
               ))}
