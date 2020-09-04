@@ -44,6 +44,18 @@ export const getCommitteeProps = (): Committee[] => {
                 company: 'Cornell University',
                 image: 'images/committee_headshot/Lu.jpeg',
             },
+            {
+                name: 'Soha Aslam',
+                title: 'Class of 2020',
+                company: 'Princeton University',
+                image: 'images/committee_headshot/Aslam.jpeg',
+            },
+            {
+                name: 'Kristian Bjarnason',
+                title: 'Class of 2021',
+                company: 'Princeton University',
+                image: 'images/committee_headshot/Bjarnason.jpeg',
+            },
         ]),
         toCommittee("Speakers", [
             {
@@ -53,22 +65,10 @@ export const getCommitteeProps = (): Committee[] => {
                 image: 'images/committee_headshot/Chow.jpeg',
             },
             {
-                name: 'Soha Aslam',
-                title: 'Class of 2020',
-                company: 'Princeton University',
-                image: 'images/committee_headshot/Aslam.jpeg',
-            },
-            {
                 name: 'Paul Krueger',
                 title: 'Class of 2021',
                 company: 'Princeton University',
                 image: 'images/committee_headshot/Krueger.jpeg',
-            },
-            {
-                name: 'Kristian Bjarnason',
-                title: 'Class of 2021',
-                company: 'Princeton University',
-                image: 'images/committee_headshot/Bjarnason.jpeg',
             },
             {
                 name: 'Greeshma Balabhadra',
