@@ -106,8 +106,8 @@ export const FeatureComp = () => {
   return (
     <Style>
       <div className="features">
-        {features.map((feature) => (
-          <Feature {...feature} />
+        {features.map((feature, k) => (
+          <Feature {...feature} key={k} />
         ))}
       </div>
     </Style>

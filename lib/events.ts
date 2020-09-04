@@ -19,7 +19,7 @@ export interface Speaker {
 
 export interface Event {
   times: Time4
-  speakers: [Speaker, Speaker, Speaker]
+  speakers: Speaker[]
   date: string
 }
 
@@ -53,7 +53,7 @@ const dateString = (m: Moment) => {
   return m.tz(baseTimezone).format('MMMM D, YYYY')
 }
 
-const toEvent = (m: Moment, speakers: [Speaker, Speaker, Speaker]): Event => {
+const toEvent = (m: Moment, speakers: Speaker[]): Event => {
   return {
     times: toTimes(m),
     speakers,
@@ -73,16 +73,28 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Qi.png',
       },
       {
-        name: 'John Birge',
-        title: 'Principal and Co-Founder',
-        company: 'Quantstar',
-        image: 'images/headshot/Birge.png',
+        name: 'Peter Hafez',
+        title: 'Chief Data Scientist',
+        company: 'RavenPack',
+        image: 'images/headshot/Hafez.jpeg',
       },
       {
         name: 'Abraham Thomas',
         title: 'Chief Data Officer and Co-Founder',
         company: 'Quandl',
         image: 'images/headshot/Thomas.png',
+      },
+      {
+        name: 'Peter Cotton',
+        title: 'Senior VP, Chief Data Scientist',
+        company: 'Intech Investment Management LLC',
+        image: 'images/headshot/Cotton.jpeg',
+      },
+      {
+        name: 'John Birge',
+        title: 'Principal and Co-Founder',
+        company: 'Quantstar',
+        image: 'images/headshot/Birge.png',
       },
     ]),
 
@@ -203,10 +215,10 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Mylnikov.png',
       },
       {
-        name: 'Alexander Fleiss',
-        title: 'CEO',
-        company: 'RebellionResearch',
-        image: 'images/headshot/Fleiss.png',
+        name: 'TBA',
+        title: '',
+        company: '',
+        image: 'images/headshot/TBA.png',
       },
     ]),
     toEvent(moment('2020-03-27T15:00:00Z'), [
