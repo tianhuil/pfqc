@@ -12,6 +12,7 @@ import { Footer } from '../components/Footer'
 import { BlurbComp } from '../components/Blurb'
 import { CommitteeComp } from '../components/Committee'
 import { getCommitteeProps } from '../lib/committee'
+import { SponsorComp } from '../components/Sponsors'
 
 type PromiseLike<T> = {
   then(onfulfilled?: (value: T) => unknown): unknown
@@ -43,6 +44,7 @@ const IndexPage: React.FC<Props> = ({ events, committees }) => (
       <BlurbComp />
       <EventComp events={events} />
       <Banner src="banner1.jpg" />
+      <SponsorComp />
       <CompanyComp />
       <Banner src="banner2.jpg" />
       <UniversityComp />
