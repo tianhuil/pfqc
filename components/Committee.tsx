@@ -1,15 +1,15 @@
 import React from 'react'
 import {
-    H1,
-    P,
-    Span,
-    Section,
-    Col,
-    Row,
-    H2,
-    CenterSmallButton,
-    theme,
-    useIsTablet,
+  H1,
+  P,
+  Span,
+  Section,
+  Col,
+  Row,
+  H2,
+  CenterSmallButton,
+  theme,
+  useIsTablet,
 } from './style'
 import styled from '@emotion/styled'
 import { Committee, Member } from '../lib/committee'
@@ -45,14 +45,14 @@ const CommitteeStyle = styled.div`
 `
 
 const MemberComp: React.FC<Member> = ({ name, title, company, image }) => {
-    return (
-        <CommitteeStyle>
-            <img src={image} />
-            <P className="name">{name}</P>
-            <P className="title">{title}</P>
-            <P className="company">{company}</P>
-        </CommitteeStyle>
-    )
+  return (
+    <CommitteeStyle>
+      <img src={image} />
+      <P className="name">{name}</P>
+      <P className="title">{title}</P>
+      <P className="company">{company}</P>
+    </CommitteeStyle>
+  )
 }
 
 const Style = styled.div`
@@ -62,22 +62,22 @@ const Style = styled.div`
 `
 
 export const CommitteeComp: React.FC<{ committees: Committee[] }> = ({ committees }) => {
-    return (
-        <Style>
-            <Section id="committee">
-                {committees.map((committee) => (
-                    <div className="committee">
-                        <H2> Committee Members: {committee.team}</H2>
-                        <Row>
-                            {committee.members.map((member) => (
-                                <Col size={2} desktop={{ size: 1 }}>
-                                    <MemberComp {...member} />
-                                </Col>
-                            ))}
-                        </Row>
-                    </div>
-                ))}
-            </Section>
-        </Style>
-    )
+  return (
+    <Style>
+      <Section id="committee">
+        <H2> Committee Members</H2>
+        {committees.map((committee) => (
+          <div className="committee">
+            <Row>
+              {committee.members.map((member) => (
+                <Col size={2} desktop={{ size: 1 }}>
+                  <MemberComp {...member} />
+                </Col>
+              ))}
+            </Row>
+          </div>
+        ))}
+      </Section>
+    </Style>
+  )
 }
