@@ -151,8 +151,8 @@ export const getEventProps = (): Event[] => {
     toEvent(moment('2020-12-05T16:00:00Z'), [
       {
         name: 'Nick Alonso',
-        title: 'TBA',
-        company: 'TBA',
+        title: 'Director Multi-Asset',
+        company: 'PanAgora Asset Management',
         image: 'images/headshot/Alonso.png',
       },
       {
