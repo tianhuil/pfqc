@@ -16,7 +16,7 @@ export const SponsorComp = () => {
       <StyleLogoGrid>
         <Row>
           {logos.map((logo, k) => (
-            <Col size={2} desktop={{ size: 2 }} key={k}>
+            <Col size={2} tablet={{ size: 2 }} key={k}>
               <div className="image">
                 <img src={'images/sponsors/' + logo} />
               </div>
