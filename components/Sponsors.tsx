@@ -1,6 +1,6 @@
 import React from 'react'
 import { H1, Section } from './style'
-import { Style as Style_LogoGrid } from './LogoGrid'
+import { Style as StyleLogoGrid } from './LogoGrid'
 import { Row, Col } from './style'
 
 const logos = [
@@ -13,17 +13,17 @@ export const SponsorComp = () => {
   return (
     <Section id="sponsors">
       <H1>Sponsors</H1>
-      <Style_LogoGrid>
+      <StyleLogoGrid>
         <Row>
-          {logos.map((logo) => (
-            <Col size={2} desktop={{ size: 2 }}>
+          {logos.map((logo, k) => (
+            <Col size={2} desktop={{ size: 2 }} key={k}>
               <div className="image">
                 <img src={'images/sponsors/' + logo} />
               </div>
             </Col>
           ))}
         </Row>
-      </Style_LogoGrid>
+      </StyleLogoGrid>
     </Section>
   )
 }
