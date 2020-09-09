@@ -19,7 +19,7 @@ export interface Speaker {
 
 export interface Event {
   times: Time4
-  speakers: [Speaker, Speaker, Speaker]
+  speakers: Speaker[]
   date: string
 }
 
@@ -53,7 +53,7 @@ const dateString = (m: Moment) => {
   return m.tz(baseTimezone).format('MMMM D, YYYY')
 }
 
-const toEvent = (m: Moment, speakers: [Speaker, Speaker, Speaker]): Event => {
+const toEvent = (m: Moment, speakers: Speaker[]): Event => {
   return {
     times: toTimes(m),
     speakers,
@@ -92,12 +92,6 @@ export const getEventProps = (): Event[] => {
         title: 'Head of Quantitative Research',
         company: 'Bloomberg LP',
         image: 'images/headshot/Dupire.png',
-      },
-      {
-        name: 'Andrew Peek',
-        title: 'Co-Founder and CEO',
-        company: 'Delphia',
-        image: 'images/headshot/Peek.png',
       },
       {
         name: 'Justin Zhen',
