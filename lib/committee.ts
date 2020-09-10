@@ -56,6 +56,12 @@ export const getCommitteeProps = (): Committee[] => {
                 company: 'Princeton University',
                 image: 'images/committee_headshot/Bjarnason.jpeg',
             },
+            {
+                name: 'Claudia Popescu',
+                title: 'Class of 2021',
+                company: 'Princeton University',
+                image: 'images/committee_headshot/Popescu.jpeg',
+            },
         ]),
         toCommittee("Speakers", [
             {
@@ -75,6 +81,12 @@ export const getCommitteeProps = (): Committee[] => {
                 title: 'Class of 2023',
                 company: 'Stony Brook University',
                 image: 'images/committee_headshot/Balabhadra.jpeg',
+            },
+            {
+                name: 'Binayak Kandel',
+                title: 'Class of 2019',
+                company: 'Boston University',
+                image: 'images/committee_headshot/Kandel.jpeg',
             },
         ]),
     ]
