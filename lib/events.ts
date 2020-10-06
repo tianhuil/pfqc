@@ -100,10 +100,10 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Dupire.png',
       },
       {
-        name: 'Andrew Peek',
-        title: 'Co-Founder and CEO',
-        company: 'Delphia',
-        image: 'images/headshot/Peek.png',
+        name: 'John Leone',
+        title: 'Managing Director and Head of Quantitative Strategy',
+        company: 'Wells Fargo',
+        image: 'images/headshot/Leone.png',
       },
       {
         name: 'Justin Zhen',
