@@ -20,7 +20,7 @@ export const BlurbComp = () => {
           <Text>
             After 10 years of conferences in Princeton and Chicago, the
             Princeton Fintech & Quant Conference is launching a virtual series
-            over 8 sessions starting September 2020. We will continue with our
+            over 9 sessions starting September 2020. We will continue with our
             usual in-person Princeton, NJ conference in the spring of 2021.
           </Text>
         </Col>
