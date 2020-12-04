@@ -156,10 +156,10 @@ export const getEventProps = (): Event[] => {
     ]),
     toEvent(moment('2020-12-05T16:00:00Z'), [
       {
-        name: 'Nick Alonso',
-        title: 'Director Multi-Asset',
+        name: 'Rohit Shrivastava',
+        title: 'Director of Equity Investments',
         company: 'PanAgora Asset Management',
-        image: 'images/headshot/Alonso.png',
+        image: 'images/headshot/Shrivastava.png',
       },
       {
         name: 'Yury Blyakhman',
