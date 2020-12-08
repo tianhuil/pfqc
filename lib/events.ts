@@ -150,7 +150,7 @@ export const getEventProps = (): Event[] => {
       {
         name: 'Gurraj Singh Sangha',
         title: 'Head of Data Science, Risk, and MI',
-        company: 'State Street',
+        company: 'Formerly at State Street',
         image: 'images/headshot/Sangha.png',
       },
     ]),
