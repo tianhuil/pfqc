@@ -91,7 +91,6 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Hafez.png',
       },
     ]),
-
     toEvent(moment('2020-10-09T17:30:00Z'), [
       {
         name: 'Bruno Dupire',
@@ -112,7 +111,6 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Zhen.png',
       },
     ]),
-
     toEvent(moment('2020-10-24T15:00:00Z'), [
       {
         name: 'Boris Lerner',
