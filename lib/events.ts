@@ -84,8 +84,13 @@ export const getEventProps = (): Event[] => {
         company: 'Quandl',
         image: 'images/headshot/Thomas.png',
       },
+      {
+        name: 'Peter Hafez',
+        title: 'Chief Data Scientist',
+        company: 'RavenPack',
+        image: 'images/headshot/Hafez.png',
+      },
     ]),
-
     toEvent(moment('2020-10-09T17:30:00Z'), [
       {
         name: 'Bruno Dupire',
@@ -94,13 +99,18 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Dupire.png',
       },
       {
+        name: 'John Leone',
+        title: 'Managing Director and Head of Quantitative Strategy',
+        company: 'Wells Fargo',
+        image: 'images/headshot/Leone.png',
+      },
+      {
         name: 'Justin Zhen',
         title: 'Co-Founder ',
         company: 'Thinknum Alternative Data',
         image: 'images/headshot/Zhen.png',
       },
     ]),
-
     toEvent(moment('2020-10-24T15:00:00Z'), [
       {
         name: 'Boris Lerner',
