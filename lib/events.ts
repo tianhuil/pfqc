@@ -65,6 +65,52 @@ export const getEventProps = (): Event[] => {
   const m = moment('2020-09-26T16:00:00Z')
 
   return [
+    toEvent(moment('2020-09-26T15:00:00Z'), [
+      {
+        name: 'Christina Qi',
+        title: 'Co-Founder',
+        company: 'Domeyard',
+        image: 'images/headshot/Qi.png',
+      },
+      {
+        name: 'John Birge',
+        title: 'Principal and Co-Founder',
+        company: 'Quantstar',
+        image: 'images/headshot/Birge.png',
+      },
+      {
+        name: 'Abraham Thomas',
+        title: 'Chief Data Officer and Co-Founder',
+        company: 'Quandl',
+        image: 'images/headshot/Thomas.png',
+      },
+      {
+        name: 'Peter Hafez',
+        title: 'Chief Data Scientist',
+        company: 'RavenPack',
+        image: 'images/headshot/Hafez.png',
+      },
+    ]),
+    toEvent(moment('2020-10-09T17:30:00Z'), [
+      {
+        name: 'Bruno Dupire',
+        title: 'Head of Quantitative Research',
+        company: 'Bloomberg LP',
+        image: 'images/headshot/Dupire.png',
+      },
+      {
+        name: 'John Leone',
+        title: 'Managing Director and Head of Quantitative Strategy',
+        company: 'Wells Fargo',
+        image: 'images/headshot/Leone.png',
+      },
+      {
+        name: 'Justin Zhen',
+        title: 'Co-Founder ',
+        company: 'Thinknum Alternative Data',
+        image: 'images/headshot/Zhen.png',
+      },
+    ]),
     toEvent(moment('2020-10-24T15:00:00Z'), [
       {
         name: 'Boris Lerner',

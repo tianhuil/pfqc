@@ -10,6 +10,8 @@ import { Banner } from '../components/Banner'
 import { AboutUs } from '../components/AboutUs'
 import { Footer } from '../components/Footer'
 import { BlurbComp } from '../components/Blurb'
+import { CommitteeComp } from '../components/Committee'
+import { getCommitteeProps } from '../lib/committee'
 import { SponsorComp } from '../components/Sponsors'
 
 type PromiseLike<T> = {
@@ -20,13 +22,16 @@ type PromiseValue<T> = T extends PromiseLike<infer U> ? U : T
 
 export const getStaticProps = async () => {
   return {
-    props: { events: getEventProps() },
+    props: {
+      events: getEventProps(),
+      committees: getCommitteeProps(),
+    },
   }
 }
 
 type Props = PromiseValue<ReturnType<typeof getStaticProps>>['props']
 
-const IndexPage: React.FC<Props> = ({ events }) => (
+const IndexPage: React.FC<Props> = ({ events, committees }) => (
   <>
     <NavbarLayout>
       <Navbar />
@@ -45,6 +50,7 @@ const IndexPage: React.FC<Props> = ({ events }) => (
       <UniversityComp />
       <Banner src="banner3.jpg" />
       <AboutUs />
+      <CommitteeComp committees={committees} />
       <Banner src="banner4.jpg" />
       <Footer />
     </BodyLayout>
