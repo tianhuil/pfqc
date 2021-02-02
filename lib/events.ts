@@ -195,9 +195,9 @@ export const getEventProps = (): Event[] => {
     ]),
     toEvent(moment('2021-02-27T16:00:00Z'), [
       {
-        name: 'TBA',
-        title: '',
-        company: '',
+        name: 'Robert Kissell',
+        title: 'President',
+        company: 'Kissell Research Group',
         image: 'images/headshot/TBA.png',
       },
       {
@@ -207,18 +207,18 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Mylnikov.png',
       },
       {
-        name: 'TBA',
-        title: '',
-        company: '',
-        image: 'images/headshot/TBA.png',
+        name: 'Chakri Cherukuri',
+        title: 'Senior Quantitative Researcher',
+        company: 'Bloomberg LP',
+        image: 'images/headshot/Cherukuri.png',
       },
     ]),
     toEvent(moment('2021-03-27T15:00:00Z'), [
       {
-        name: 'TBA',
-        title: '',
-        company: '',
-        image: 'images/headshot/TBA.png',
+        name: 'Vasant Dhar',
+        title: 'Professor of Information Systems',
+        company: 'NYU Stern',
+        image: 'images/headshot/Dhar.png',
       },
       {
         name: 'Jess Stauth',
@@ -235,10 +235,10 @@ export const getEventProps = (): Event[] => {
     ]),
     toEvent(moment('2021-04-24T15:00:00Z'), [
       {
-        name: 'TBA',
-        title: '',
-        company: '',
-        image: 'images/headshot/TBA.png',
+        name: 'Mike Schuster',
+        title: 'Managing Director at Two Sigma - Head of AI Core team',
+        company: 'Two Sigma',
+        image: 'images/headshot/Schuster.png',
       },
       {
         name: 'Dr. Miquel Noguer i Alonso',
