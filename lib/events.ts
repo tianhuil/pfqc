@@ -173,7 +173,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Pelts.png',
       },
     ]),
-    toEvent(moment('2020-01-31T16:00:00Z'), [
+    toEvent(moment('2021-01-31T16:00:00Z'), [
       {
         name: 'Dr. Harvey Stein	',
         title: 'Head, Quantitative Risk Analytics',
@@ -193,7 +193,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Benzschawel.png',
       },
     ]),
-    toEvent(moment('2020-02-27T16:00:00Z'), [
+    toEvent(moment('2021-02-27T16:00:00Z'), [
       {
         name: 'TBA',
         title: '',
@@ -213,7 +213,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/TBA.png',
       },
     ]),
-    toEvent(moment('2020-03-27T15:00:00Z'), [
+    toEvent(moment('2021-03-27T15:00:00Z'), [
       {
         name: 'TBA',
         title: '',
@@ -233,7 +233,7 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Izydorcik.png',
       },
     ]),
-    toEvent(moment('2020-04-24T15:00:00Z'), [
+    toEvent(moment('2021-04-24T15:00:00Z'), [
       {
         name: 'TBA',
         title: '',
