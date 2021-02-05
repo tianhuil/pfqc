@@ -65,6 +65,66 @@ export const getEventProps = (): Event[] => {
   const m = moment('2020-09-26T16:00:00Z')
 
   return [
+    toEvent(moment('2021-02-27T16:00:00Z'), [
+      {
+        name: 'Robert Kissell',
+        title: 'President',
+        company: 'Kissell Research Group',
+        image: 'images/headshot/TBA.png',
+      },
+      {
+        name: 'George Mylnikov',
+        title: 'Portfolio Manager, Head of Quantitative Research',
+        company: 'Windhaven Investment Management',
+        image: 'images/headshot/Mylnikov.png',
+      },
+      {
+        name: 'Chakri Cherukuri',
+        title: 'Senior Quantitative Researcher',
+        company: 'Bloomberg LP',
+        image: 'images/headshot/Cherukuri.png',
+      },
+    ]),
+    toEvent(moment('2021-03-27T15:00:00Z'), [
+      {
+        name: 'Vasant Dhar',
+        title: 'Professor of Information Systems',
+        company: 'NYU Stern',
+        image: 'images/headshot/Dhar.png',
+      },
+      {
+        name: 'Jess Stauth',
+        title: 'Managing Director',
+        company: 'Fidelity Labs',
+        image: 'images/headshot/Stauth.png',
+      },
+      {
+        name: 'Alex Izydorcik',
+        title: 'Head of Data Science',
+        company: 'Coatue',
+        image: 'images/headshot/Izydorcik.png',
+      },
+    ]),
+    toEvent(moment('2021-04-24T15:00:00Z'), [
+      {
+        name: 'Mike Schuster',
+        title: 'Managing Director at Two Sigma - Head of AI Core team',
+        company: 'Two Sigma',
+        image: 'images/headshot/Schuster.png',
+      },
+      {
+        name: 'Dr. Miquel Noguer i Alonso',
+        title: 'Founder',
+        company: 'Artificial Intelligence Finance Institute',
+        image: 'images/headshot/NogueriAlonso.png',
+      },
+      {
+        name: 'Kyle Schlotman',
+        title: 'Partner and CIO',
+        company: 'Connetic Ventures',
+        image: 'images/headshot/Schlotman.png',
+      },
+    ]),
     toEvent(moment('2020-09-26T15:00:00Z'), [
       {
         name: 'Christina Qi',
@@ -191,66 +251,6 @@ export const getEventProps = (): Event[] => {
         title: 'Founder and Principal',
         company: 'Benzschawel Scientific LLC',
         image: 'images/headshot/Benzschawel.png',
-      },
-    ]),
-    toEvent(moment('2021-02-27T16:00:00Z'), [
-      {
-        name: 'Robert Kissell',
-        title: 'President',
-        company: 'Kissell Research Group',
-        image: 'images/headshot/TBA.png',
-      },
-      {
-        name: 'George Mylnikov',
-        title: 'Portfolio Manager, Head of Quantitative Research',
-        company: 'Windhaven Investment Management',
-        image: 'images/headshot/Mylnikov.png',
-      },
-      {
-        name: 'Chakri Cherukuri',
-        title: 'Senior Quantitative Researcher',
-        company: 'Bloomberg LP',
-        image: 'images/headshot/Cherukuri.png',
-      },
-    ]),
-    toEvent(moment('2021-03-27T15:00:00Z'), [
-      {
-        name: 'Vasant Dhar',
-        title: 'Professor of Information Systems',
-        company: 'NYU Stern',
-        image: 'images/headshot/Dhar.png',
-      },
-      {
-        name: 'Jess Stauth',
-        title: 'Managing Director',
-        company: 'Fidelity Labs',
-        image: 'images/headshot/Stauth.png',
-      },
-      {
-        name: 'Alex Izydorcik',
-        title: 'Head of Data Science',
-        company: 'Coatue',
-        image: 'images/headshot/Izydorcik.png',
-      },
-    ]),
-    toEvent(moment('2021-04-24T15:00:00Z'), [
-      {
-        name: 'Mike Schuster',
-        title: 'Managing Director at Two Sigma - Head of AI Core team',
-        company: 'Two Sigma',
-        image: 'images/headshot/Schuster.png',
-      },
-      {
-        name: 'Dr. Miquel Noguer i Alonso',
-        title: 'Founder',
-        company: 'Artificial Intelligence Finance Institute',
-        image: 'images/headshot/NogueriAlonso.png',
-      },
-      {
-        name: 'Kyle Schlotman',
-        title: 'Partner and CIO',
-        company: 'Connetic Ventures',
-        image: 'images/headshot/Schlotman.png',
       },
     ]),
   ]
