@@ -65,26 +65,6 @@ export const getEventProps = (): Event[] => {
   const m = moment('2020-09-26T16:00:00Z')
 
   return [
-    toEvent(moment('2021-02-27T16:00:00Z'), [
-      {
-        name: 'Robert Kissell',
-        title: 'President',
-        company: 'Kissell Research Group',
-        image: 'images/headshot/TBA.png',
-      },
-      {
-        name: 'George Mylnikov',
-        title: 'Portfolio Manager, Head of Quantitative Research',
-        company: 'Windhaven Investment Management',
-        image: 'images/headshot/Mylnikov.png',
-      },
-      {
-        name: 'Chakri Cherukuri',
-        title: 'Senior Quantitative Researcher',
-        company: 'Bloomberg LP',
-        image: 'images/headshot/Cherukuri.png',
-      },
-    ]),
     toEvent(moment('2021-03-27T15:00:00Z'), [
       {
         name: 'Vasant Dhar',
@@ -251,6 +231,26 @@ export const getEventProps = (): Event[] => {
         title: 'Founder and Principal',
         company: 'Benzschawel Scientific LLC',
         image: 'images/headshot/Benzschawel.png',
+      },
+    ]),
+    toEvent(moment('2021-02-27T16:00:00Z'), [
+      {
+        name: 'Robert Kissell',
+        title: 'President',
+        company: 'Kissell Research Group',
+        image: 'images/headshot/TBA.png',
+      },
+      {
+        name: 'George Mylnikov',
+        title: 'Portfolio Manager, Head of Quantitative Research',
+        company: 'Windhaven Investment Management',
+        image: 'images/headshot/Mylnikov.png',
+      },
+      {
+        name: 'Chakri Cherukuri',
+        title: 'Senior Quantitative Researcher',
+        company: 'Bloomberg LP',
+        image: 'images/headshot/Cherukuri.png',
       },
     ]),
   ]
