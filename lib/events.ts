@@ -68,8 +68,8 @@ export const getEventProps = (): Event[] => {
     toEvent(moment('2021-03-27T15:00:00Z'), [
       {
         name: 'Vasant Dhar',
-        title: 'Professor of Information Systems',
-        company: 'NYU Stern',
+        title: 'Professor, Stern School of Business and NYU Center for Data Science',
+        company: 'Founder, SCT Capital Management',
         image: 'images/headshot/Dhar.png',
       },
       {
