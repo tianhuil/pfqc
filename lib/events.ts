@@ -73,12 +73,6 @@ export const getEventProps = (): Event[] => {
         image: 'images/headshot/Dhar.png',
       },
       {
-        name: 'Jess (Porter) Stauth',
-        title: 'Chief Investment Officer',
-        company: 'Active Strategies at Geode Capital Management',
-        image: 'images/headshot/Stauth.png',
-      },
-      {
         name: 'Alex Izydorcik',
         title: 'Head of Data Science',
         company: 'Coatue',
