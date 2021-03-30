@@ -65,20 +65,6 @@ export const getEventProps = (): Event[] => {
   const m = moment('2020-09-26T16:00:00Z')
 
   return [
-    toEvent(moment('2021-03-27T15:00:00Z'), [
-      {
-        name: 'Vasant Dhar',
-        title: 'Professor, Stern School of Business and NYU Center for Data Science',
-        company: 'Founder, SCT Capital Management',
-        image: 'images/headshot/Dhar.png',
-      },
-      {
-        name: 'Alex Izydorcik',
-        title: 'Head of Data Science',
-        company: 'Coatue',
-        image: 'images/headshot/Izydorcik.png',
-      },
-    ]),
     toEvent(moment('2021-04-24T15:00:00Z'), [
       {
         name: 'Mike Schuster',
@@ -245,6 +231,14 @@ export const getEventProps = (): Event[] => {
         title: 'Senior Quantitative Researcher',
         company: 'Bloomberg LP',
         image: 'images/headshot/Cherukuri.png',
+      },
+    ]),
+    toEvent(moment('2021-03-27T15:00:00Z'), [
+      {
+        name: 'Vasant Dhar',
+        title: 'Professor, Stern School of Business and NYU Center for Data Science',
+        company: 'Founder, SCT Capital Management',
+        image: 'images/headshot/Dhar.png',
       },
     ]),
   ]
