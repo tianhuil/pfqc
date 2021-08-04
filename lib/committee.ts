@@ -104,7 +104,7 @@ export const getCommitteeProps = (): Committee[] => {
                 name: 'Rui Ding',
                 title: 'Class of 2023',
                 company: 'Stony Brook University',
-                image: 'images/committee_headshot/Ding.jpeg',
+                image: 'images/committee_headshot/TBA.jpeg',
             },
         ]),
     ]
