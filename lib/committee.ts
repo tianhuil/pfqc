@@ -71,12 +71,6 @@ export const getCommitteeProps = (): Committee[] => {
                 image: 'images/committee_headshot/Kandel.jpeg',
             },
             {
-                name: 'Christy Matthews',
-                title: 'Class of 2020',
-                company: 'Princeton University',
-                image: 'images/committee_headshot/Matthews.jpeg',
-            },
-            {
                 name: 'Greeshma Balabhadra',
                 title: 'Class of 2023',
                 company: 'Stony Brook University',
@@ -95,12 +89,6 @@ export const getCommitteeProps = (): Committee[] => {
                 image: 'images/committee_headshot/Chow.jpeg',
             },
             {
-                name: 'Sarah Nagy',
-                title: 'Sector Data Analyst',
-                company: 'Ashler Capital',
-                image: 'images/committee_headshot/Nagy.jpeg',
-            },
-            {
                 name: 'Maria Velicu',
                 title: 'Class of 2020',
                 company: 'Yale University',
@@ -117,12 +105,6 @@ export const getCommitteeProps = (): Committee[] => {
                 title: 'Class of 2023',
                 company: 'Stony Brook University',
                 image: 'images/committee_headshot/Ding.jpeg',
-            },
-            {
-                name: 'Ruiqing Cao',
-                title: 'Class of 2019',
-                company: 'Harvard University',
-                image: 'images/committee_headshot/Cao.jpeg',
             },
         ]),
     ]
