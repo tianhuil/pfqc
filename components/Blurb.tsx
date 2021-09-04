@@ -19,10 +19,9 @@ export const BlurbComp = () => {
         <Col size={4} desktop={{ left: 1, right: 1, size: 2 }}>
           <Text>
             After 10 years of conferences in Princeton and Chicago, the
-            Princeton Fintech & Quant Conference is continuing the 
-            online format with 2 dates during Fall 2021. We hope to 
-            continue with our usual in-person Princeton, NJ conference 
-            in the spring of 2022.
+            Princeton Fintech & Quant Conference is continuing with
+            2 sessions starting in October 2021. We hope to continue with our
+            usual in-person Princeton, NJ conference in the spring of 2022.
           </Text>
         </Col>
       </Row>
