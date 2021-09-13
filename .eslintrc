@@ -1,14 +1,13 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react", "plugin:prettier/recommended"],
+  "plugins": ["@typescript-eslint", "react", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "prettier",
+    "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
-    "jsx-quotes": [2, "prefer-single"],
     "semi": ["error", "never"],
     "quotes": [2, "single"],
     "indent": ["error", 2]
