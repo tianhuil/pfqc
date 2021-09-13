@@ -2,8 +2,6 @@ import { useMediaPredicate } from 'react-media-hook'
 
 export const baseFontSize = 16
 
-// ,
-
 export const theme = {
   fontSize: (factor: number = 1) => `${baseFontSize * factor}px`,
   lineHeight: (factor: number = 1) => `${baseFontSize * 1.5 * factor}px`,

@@ -1,3 +1,4 @@
+import React from 'react'
 import { EventComp } from '../components/Events'
 import { Navbar } from '../components/Navbar'
 import { Splash } from '../components/Splash'

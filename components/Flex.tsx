@@ -1,3 +1,5 @@
+import React from 'react'
+
 import CSS from 'csstype'
 
 // https://medium.com/better-programming/make-a-flexbox-react-component-e96a038da7ec

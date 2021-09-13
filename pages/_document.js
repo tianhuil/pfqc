@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Document from 'next/document'
 import createEmotionServer from 'create-emotion-server'
 import { Html, Head, Main, NextScript } from 'next/document'
