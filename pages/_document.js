@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable react/react-in-jsx-scope */
 import Document from 'next/document'
 import createEmotionServer from 'create-emotion-server'
 import { Html, Head, Main, NextScript } from 'next/document'

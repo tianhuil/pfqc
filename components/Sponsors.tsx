@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react'
 import { H1, Section } from './style'
 import { Style as StyleLogoGrid } from './LogoGrid'

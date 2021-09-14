@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { LargeButton, Center } from './style/elements'

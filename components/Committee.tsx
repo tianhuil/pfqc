@@ -1,15 +1,12 @@
+/* eslint-disable react/jsx-key */
 import React from 'react'
 import {
-  H1,
   P,
-  Span,
   Section,
   Col,
   Row,
   H2,
-  CenterSmallButton,
   theme,
-  useIsTablet,
 } from './style'
 import styled from '@emotion/styled'
 import { Committee, Member } from '../lib/committee'

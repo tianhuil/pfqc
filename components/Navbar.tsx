@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { theme, useIsTablet, P } from './style'
@@ -66,7 +67,7 @@ export const Navbar = () => {
             </P>
           </>
         ) : null}
-        <a target="_blank" href={eventbriteUrl}>
+        <a target="_blank" href={eventbriteUrl} rel="noreferrer">
           <P className="link link-main">Register</P>
         </a>
       </div>

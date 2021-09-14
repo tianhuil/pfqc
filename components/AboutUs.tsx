@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react'
 import { Section, H1, Row, Col, P, theme, CenterSmallButton } from './style'
 import styled from '@emotion/styled'

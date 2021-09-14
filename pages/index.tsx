@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 import { EventComp } from '../components/Events'
 import { Navbar } from '../components/Navbar'
 import { Splash } from '../components/Splash'

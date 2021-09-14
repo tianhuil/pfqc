@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { useMediaPredicate } from 'react-media-hook'
 
 export const baseFontSize = 16
@@ -5,8 +6,8 @@ export const baseFontSize = 16
 // ,
 
 export const theme = {
-  fontSize: (factor: number = 1) => `${baseFontSize * factor}px`,
-  lineHeight: (factor: number = 1) => `${baseFontSize * 1.5 * factor}px`,
+  fontSize: (factor = 1) => `${baseFontSize * factor}px`,
+  lineHeight: (factor = 1) => `${baseFontSize * 1.5 * factor}px`,
   navbarHeight: `${baseFontSize * 5}px`,
   color: {
     orange: '#e77500', // 'rgb(237, 106, 31)', // '#e77500'

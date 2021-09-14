@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 import CSS from 'csstype'
 
 // https://medium.com/better-programming/make-a-flexbox-react-component-e96a038da7ec
