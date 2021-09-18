@@ -62,8 +62,6 @@ const toEvent = (m: Moment, speakers: Speaker[]): Event => {
 }
 
 export const getEventProps = (): Event[] => {
-  const m = moment('2020-09-26T16:00:00Z')
-
   return [
     toEvent(moment('2021-04-24T15:00:00Z'), [
       {
