@@ -45,7 +45,7 @@ export const AboutUs = () => {
             </P>
             <P className="p">
               The student and young alumni organizing committee is exclusively
-              volunteer and 100% of proceeds go to support education nonprofits .
+              volunteer and 100% of proceeds go to support education nonprofits  .
             </P>
           </Col>
           <Col size={0} desktop={{ size: 2 }}>
