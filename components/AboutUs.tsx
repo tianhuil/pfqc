@@ -34,7 +34,7 @@ export const AboutUs = () => {
               The Princeton Fintech and Quant Conference seeks to bring together
               a unique cross-section of the leading experts from academia,
               industry, and government in a relaxed intellectual environment to
-              catalyze discussions and strengthen ties across traditional
+              catalyze discussions and strengthen ties across  traditional
               boundaries.
             </P>
             <P className="p">
