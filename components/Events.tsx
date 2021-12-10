@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  H1,
+  //  H1,
   P,
   Span,
   Section,

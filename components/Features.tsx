@@ -1,5 +1,5 @@
 import React from 'react'
-import { Section, theme, P, H2 } from './style'
+import { theme, P, H2 } from './style'
 import styled from '@emotion/styled'
 
 const FeatureStyle = styled.div`

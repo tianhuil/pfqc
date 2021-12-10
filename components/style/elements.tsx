@@ -41,7 +41,7 @@ export const Center = styled.div`
 
 export const LargeButton: React.FC = ({ children }) => {
   return (
-    <a target="_blank" href={eventbriteUrl}>
+    <a target="_blank" rel="noreferrer" href={eventbriteUrl}>
       <Capsule fontSize={16}>{children}</Capsule>
     </a>
   )
@@ -49,7 +49,7 @@ export const LargeButton: React.FC = ({ children }) => {
 
 export const SmallButton: React.FC = ({ children }) => {
   return (
-    <a target="_blank" href={eventbriteUrl}>
+    <a target="_blank" rel="noreferrer" href={eventbriteUrl}>
       <Capsule fontSize={14}>{children}</Capsule>
     </a>
   )

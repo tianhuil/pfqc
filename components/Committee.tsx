@@ -1,15 +1,15 @@
 import React from 'react'
 import {
-  H1,
+  // H1,
   P,
-  Span,
+  // Span,
   Section,
   Col,
   Row,
   H2,
-  CenterSmallButton,
+  // CenterSmallButton,
   theme,
-  useIsTablet,
+  // useIsTablet,
 } from './style'
 import styled from '@emotion/styled'
 import { Committee, Member } from '../lib/committee'
