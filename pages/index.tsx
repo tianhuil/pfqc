@@ -1,19 +1,21 @@
+import { GetStaticProps } from 'next'
 import React from 'react'
-import { EventComp } from '../components/Events'
-import { Navbar } from '../components/Navbar'
-import { Splash } from '../components/Splash'
-import { SplashLayout, BodyLayout, NavbarLayout } from '../components/Layout'
-import { Stats } from '../components/Stats'
-import { getEventProps } from '../lib/events'
-import { CompanyComp } from '../components/Company'
-import { UniversityComp } from '../components/University'
-import { Banner } from '../components/Banner'
+
 import { AboutUs } from '../components/AboutUs'
-import { Footer } from '../components/Footer'
+import { Banner } from '../components/Banner'
 import { BlurbComp } from '../components/Blurb'
 import { CommitteeComp } from '../components/Committee'
-import { getCommitteeProps } from '../lib/committee'
+import { CompanyComp } from '../components/Company'
+import { EventComp } from '../components/Events'
+import { Footer } from '../components/Footer'
+import { BodyLayout, NavbarLayout, SplashLayout } from '../components/Layout'
+import { Navbar } from '../components/Navbar'
+import { Splash } from '../components/Splash'
 import { SponsorComp } from '../components/Sponsors'
+import { Stats } from '../components/Stats'
+import { UniversityComp } from '../components/University'
+import { Committee, getCommitteeProps } from '../lib/committee'
+import { Event, getEventProps } from '../lib/events'
 
 type PromiseLike<T> = {
   then(onfulfilled?: (value: T) => unknown): unknown
@@ -21,7 +23,12 @@ type PromiseLike<T> = {
 
 type PromiseValue<T> = T extends PromiseLike<infer U> ? U : T
 
-export const getStaticProps = async () => {
+type Props = {
+  events: Event[]
+  committees: Committee[]
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
       events: getEventProps(),
@@ -29,8 +36,6 @@ export const getStaticProps = async () => {
     },
   }
 }
-
-type Props = PromiseValue<ReturnType<typeof getStaticProps>>['props']
 
 const IndexPage: React.FC<Props> = ({ events, committees }) => (
   <>
