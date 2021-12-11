@@ -1,6 +1,9 @@
+import type { AppProps } from 'next/app'
+
 import 'normalize.css'
+import React from 'react'
 import '../public/styles.css'
 
-export default function MyApp({ Component, pageProps }) {
+export const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return <Component {...pageProps} />
 }

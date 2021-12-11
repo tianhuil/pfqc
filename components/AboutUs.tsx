@@ -23,7 +23,7 @@ const Style = styled.div`
   }
 `
 
-export const AboutUs = () => {
+export const AboutUs: React.FC = () => {
   return (
     <Style>
       <Section id="aboutus">

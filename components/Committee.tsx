@@ -1,15 +1,15 @@
 import React from 'react'
 import {
-  H1,
+  // H1,
   P,
-  Span,
+  // Span,
   Section,
   Col,
   Row,
   H2,
-  CenterSmallButton,
+  // CenterSmallButton,
   theme,
-  useIsTablet,
+  // useIsTablet,
 } from './style'
 import styled from '@emotion/styled'
 import { Committee, Member } from '../lib/committee'
@@ -61,16 +61,18 @@ const Style = styled.div`
   }
 `
 
-export const CommitteeComp: React.FC<{ committees: Committee[] }> = ({ committees }) => {
+export const CommitteeComp: React.FC<{ committees: Committee[] }> = ({
+  committees,
+}) => {
   return (
     <Style>
       <Section id="committee">
         <H2> Committee Members</H2>
-        {committees.map((committee) => (
-          <div className="committee">
+        {committees.map((committee, key) => (
+          <div className="committee" key={key}>
             <Row>
-              {committee.members.map((member) => (
-                <Col size={2} desktop={{ size: 1 }}>
+              {committee.members.map((member, key) => (
+                <Col size={2} desktop={{ size: 1 }} key={key}>
                   <MemberComp {...member} />
                 </Col>
               ))}

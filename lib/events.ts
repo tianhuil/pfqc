@@ -62,8 +62,6 @@ const toEvent = (m: Moment, speakers: Speaker[]): Event => {
 }
 
 export const getEventProps = (): Event[] => {
-  const m = moment('2020-09-26T16:00:00Z')
-
   return [
     toEvent(moment('2021-04-24T15:00:00Z'), [
       {
@@ -153,7 +151,6 @@ export const getEventProps = (): Event[] => {
     ]),
     toEvent(moment('2020-11-21T16:00:00Z'), [
       {
-
         name: 'Mike Soss',
         title: 'Head of Fusion (Internal Alpha Capture)',
         company: 'Point72',
@@ -236,7 +233,8 @@ export const getEventProps = (): Event[] => {
     toEvent(moment('2021-03-27T15:00:00Z'), [
       {
         name: 'Vasant Dhar',
-        title: 'Professor, Stern School of Business and NYU Center for Data Science',
+        title:
+          'Professor, Stern School of Business and NYU Center for Data Science',
         company: 'Founder, SCT Capital Management',
         image: 'images/headshot/Dhar.png',
       },

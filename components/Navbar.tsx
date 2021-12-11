@@ -66,7 +66,7 @@ export const Navbar = () => {
             </P>
           </>
         ) : null}
-        <a target="_blank" href={eventbriteUrl}>
+        <a target="_blank" rel="noreferrer" href={eventbriteUrl}>
           <P className="link link-main">Register</P>
         </a>
       </div>
