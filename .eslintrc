@@ -1,6 +1,10 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react", "prettier"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "prettier"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -8,8 +12,14 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
-    "semi": ["error", "never"],
-    "indent": ["error", 2]
+    "semi": [
+      "error",
+      "never"
+    ],
+    "indent": [
+      "error",
+      2
+    ]
   },
   "settings": {
     "react": {
@@ -18,9 +28,16 @@
   },
   "overrides": [
     {
-      "files": ["*.js", "*.jsx"],
+      "files": [
+        "*.js",
+        "*.jsx",
+        //        "*.ts",
+        //        "*.tsx"
+      ],
       "rules": {
-        "@typescript-eslint/explicit-module-boundary-types": "off"
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        //        "@typescript-eslint/no-explicit-any": "off",
+        //        "@typescript-eslint/no-inferrable-types": "off"
       }
     }
   ]
